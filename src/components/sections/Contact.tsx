@@ -5,24 +5,48 @@ import { motion } from 'framer-motion';
 import { Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { BUSINESS_HOURS, SITE } from '@/lib/constants';
+import { BUSINESS_HOURS, PHONE_TEL, SITE } from '@/lib/constants';
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
+
     const form = e.currentTarget;
     const data = new FormData(form);
-    const name = String(data.get('name') ?? '');
-    const email = String(data.get('email') ?? '');
-    const phone = String(data.get('phone') ?? '');
-    const message = String(data.get('message') ?? '');
+    const payload = {
+      name: String(data.get('name') ?? ''),
+      email: String(data.get('email') ?? ''),
+      phone: String(data.get('phone') ?? ''),
+      message: String(data.get('message') ?? ''),
+    };
 
-    const subject = `Hungryana inquiry from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
-    window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        setError(result.error ?? 'Something went wrong. Please try again.');
+        return;
+      }
+
+      form.reset();
+      setSubmitted(true);
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -31,7 +55,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Get In Touch"
           title="Contact Us"
-          subtitle="We'd love to hear from you. Reserve a table or send us a message."
+          subtitle="We'd love to hear from you. Send a message or call to order."
         />
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
@@ -62,7 +86,7 @@ export function Contact() {
                   <Phone className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
                     <p className="text-sm font-medium text-cream/50">Phone</p>
-                    <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="text-cream">
+                    <a href={PHONE_TEL} className="text-cream">
                       {SITE.phone}
                     </a>
                   </div>
@@ -109,15 +133,31 @@ export function Contact() {
                 </div>
                 <h3 className="font-display text-2xl font-bold text-warm-white">Message Sent!</h3>
                 <p className="mt-2 text-cream/70">
-                  Your email app should open with your message pre-filled. Send it to reach us at{' '}
-                  {SITE.email}.
+                  Thank you for reaching out. We&apos;ve received your message and will get back to
+                  you soon.
                 </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6 text-sm font-semibold text-gold underline-offset-4 hover:underline"
+                >
+                  Send another message
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 md:p-8">
                 <h3 className="mb-6 font-display text-xl font-semibold text-warm-white">
                   Send Us a Message
                 </h3>
+
+                {error && (
+                  <p
+                    role="alert"
+                    className="mb-5 rounded-xl border border-red/40 bg-red/10 px-4 py-3 text-sm text-cream"
+                  >
+                    {error}
+                  </p>
+                )}
 
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
@@ -130,7 +170,8 @@ export function Contact() {
                       type="text"
                       required
                       autoComplete="name"
-                      className="w-full rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                      disabled={loading}
+                      className="w-full rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold disabled:opacity-60"
                       placeholder="Your name"
                     />
                   </div>
@@ -144,7 +185,8 @@ export function Contact() {
                       type="email"
                       required
                       autoComplete="email"
-                      className="w-full rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                      disabled={loading}
+                      className="w-full rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold disabled:opacity-60"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -159,7 +201,8 @@ export function Contact() {
                     name="phone"
                     type="tel"
                     autoComplete="tel"
-                    className="w-full rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                    disabled={loading}
+                    className="w-full rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold disabled:opacity-60"
                     placeholder="+91 XXXXX XXXXX"
                   />
                 </div>
@@ -173,15 +216,16 @@ export function Contact() {
                     name="message"
                     rows={4}
                     required
-                    className="w-full resize-none rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
-                    placeholder="Tell us about your reservation or inquiry..."
+                    disabled={loading}
+                    className="w-full resize-none rounded-xl border border-gold/15 bg-charcoal-light px-4 py-3 text-cream placeholder:text-cream/30 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold disabled:opacity-60"
+                    placeholder="Tell us about your order or inquiry..."
                   />
                 </div>
 
                 <div className="mt-6">
                   <Button type="submit" variant="primary" ariaLabel="Send message">
                     <Send className="h-4 w-4" />
-                    Send Message
+                    {loading ? 'Sending...' : 'Send Message'}
                   </Button>
                 </div>
               </form>

@@ -8,9 +8,12 @@ import { MENU_SECTIONS, MENU_TAGLINE } from '@/data/menu';
 import clsx from 'clsx';
 
 export function FullMenu() {
-  const [activeSection, setActiveSection] = useState(MENU_SECTIONS[0].id);
+  const [activeSection, setActiveSection] = useState('biryani');
 
-  const current = MENU_SECTIONS.find((s) => s.id === activeSection) ?? MENU_SECTIONS[0];
+  const current =
+    MENU_SECTIONS.find((s) => s.id === activeSection) ??
+    MENU_SECTIONS.find((s) => s.id === 'biryani') ??
+    MENU_SECTIONS[0];
 
   return (
     <section id="full-menu" className="section-padding bg-charcoal-dark">

@@ -19,33 +19,26 @@ export interface MenuSection {
 
 export const MENU_SECTIONS: MenuSection[] = [
   {
-    id: 'soups-starters',
-    title: 'Soups & Starters',
-    emoji: '🥣',
+    id: 'biryani',
+    title: 'Biryani',
+    emoji: '🍛',
     subsections: [
       {
-        title: 'Soups',
+        title: 'The Biryani Station',
         items: [
-          { name: 'Classic Tomato Soup', price: '₹60' },
-          { name: 'Sweet Corn Soup (Veg/Non-Veg)', price: '₹100' },
+          {
+            name: 'Chicken Biryani',
+            price: '₹130',
+            description: '1pc Chicken, 1pc Aloo, 1pc Egg',
+            featured: true,
+          },
+          {
+            name: 'Mutton Biryani',
+            price: '₹200',
+            description: '1pc Mutton, 1pc Aloo, 1pc Egg',
+          },
         ],
       },
-      {
-        title: 'Indo-Chinese Appetizers',
-        items: [
-          { name: 'Chilli Chicken (Dry / Gravy)', price: '₹120' },
-          { name: 'Chilli Paneer (Dry / Gravy)', price: '₹120' },
-          { name: 'Hot Garlic Chicken', price: '₹150' },
-          { name: 'Honey Chicken (Crispy & Glazed)', price: '₹150' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'signatures',
-    title: 'The Signatures',
-    emoji: '⭐',
-    subsections: [
       {
         title: "Chef's Special",
         items: [
@@ -57,19 +50,44 @@ export const MENU_SECTIONS: MenuSection[] = [
           },
         ],
       },
+    ],
+  },
+  {
+    id: 'pizza-pasta',
+    title: 'Pizza & Pasta',
+    emoji: '🍕',
+    subsections: [
       {
-        title: 'The Biryani Station',
+        title: 'Hand-Tossed Pizzas',
         items: [
-          {
-            name: 'Chicken Biryani',
-            price: '₹130',
-            description: '1pc Chicken, 1pc Aloo, 1pc Egg',
-          },
-          {
-            name: 'Mutton Biryani',
-            price: '₹200',
-            description: '1pc Mutton, 1pc Aloo, 1pc Egg',
-          },
+          { name: 'Margherita (Classic Cheese)', price: '₹100' },
+          { name: 'Farmhouse (Fresh Veggies & Paneer)', price: '₹120' },
+          { name: 'Peri-Peri Pizza (Spicy Kick)', price: 'Veg ₹130 / Chk ₹150' },
+          { name: 'Chicken Feast (Loaded with Chicken)', price: '₹180' },
+          { name: 'Cheese Overloaded (Chicken + Extra Mozzarella)', price: '₹200', featured: true },
+        ],
+      },
+      {
+        title: 'Italian Pasta',
+        items: [
+          { name: 'Veg Pasta (Red / White Sauce)', price: '₹80' },
+          { name: 'Chicken Pasta (Red / White Sauce)', price: '₹100' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'starters',
+    title: 'Starters',
+    emoji: '🥟',
+    subsections: [
+      {
+        title: 'Indo-Chinese Appetizers',
+        items: [
+          { name: 'Chilli Chicken (Dry / Gravy)', price: '₹120' },
+          { name: 'Chilli Paneer (Dry / Gravy)', price: '₹120' },
+          { name: 'Hot Garlic Chicken', price: '₹150' },
+          { name: 'Honey Chicken (Crispy & Glazed)', price: '₹150' },
         ],
       },
     ],
@@ -91,30 +109,6 @@ export const MENU_SECTIONS: MenuSection[] = [
             price: '₹220',
           },
           { name: 'Chicken Kosha (4 pcs - Spicy semi-dry)', price: '₹180' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'pizza-pasta',
-    title: 'Pizza & Pasta',
-    emoji: '🍕',
-    subsections: [
-      {
-        title: 'Hand-Tossed Pizzas',
-        items: [
-          { name: 'Margherita (Classic Cheese)', price: '₹100' },
-          { name: 'Farmhouse (Fresh Veggies & Paneer)', price: '₹120' },
-          { name: 'Peri-Peri Pizza (Spicy Kick)', price: 'Veg ₹130 / Chk ₹150' },
-          { name: 'Chicken Feast (Loaded with Chicken)', price: '₹180' },
-          { name: 'Cheese Overloaded (Chicken + Extra Mozzarella)', price: '₹200' },
-        ],
-      },
-      {
-        title: 'Italian Pasta',
-        items: [
-          { name: 'Veg Pasta (Red / White Sauce)', price: '₹80' },
-          { name: 'Chicken Pasta (Red / White Sauce)', price: '₹100' },
         ],
       },
     ],
@@ -194,6 +188,20 @@ export const MENU_SECTIONS: MenuSection[] = [
         title: 'Dessert',
         items: [
           { name: 'Fried Ice Cream', price: '₹80', featured: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'soups',
+    title: 'Soups',
+    emoji: '🥣',
+    subsections: [
+      {
+        title: 'Soups',
+        items: [
+          { name: 'Classic Tomato Soup', price: '₹60' },
+          { name: 'Sweet Corn Soup (Veg/Non-Veg)', price: '₹100' },
         ],
       },
     ],

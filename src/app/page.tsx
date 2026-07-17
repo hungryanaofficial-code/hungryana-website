@@ -5,9 +5,6 @@ const About = dynamic(() => import('@/components/sections/About').then((m) => m.
 const Specialities = dynamic(() =>
   import('@/components/sections/Specialities').then((m) => m.Specialities)
 );
-const MenuCategories = dynamic(() =>
-  import('@/components/sections/MenuCategories').then((m) => m.MenuCategories)
-);
 const FullMenu = dynamic(() => import('@/components/sections/FullMenu').then((m) => m.FullMenu));
 const QRMenu = dynamic(() => import('@/components/sections/QRMenu').then((m) => m.QRMenu));
 const WhyChoose = dynamic(() => import('@/components/sections/WhyChoose').then((m) => m.WhyChoose));
@@ -23,7 +20,6 @@ export default function HomePage() {
       <Hero />
       <About />
       <Specialities />
-      <MenuCategories />
       <FullMenu />
       <QRMenu />
       <WhyChoose />

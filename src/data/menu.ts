@@ -202,7 +202,7 @@ export const MENU_SECTIONS: MenuSection[] = [
   },
   {
     id: 'breads-sides',
-    title: 'Breads & Sides',
+    title: 'Rice, Breads & Dal',
     emoji: '🫓',
     subsections: [
       {

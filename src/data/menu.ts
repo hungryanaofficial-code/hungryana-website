@@ -34,8 +34,8 @@ export const MENU_SECTIONS: MenuSection[] = [
           },
           {
             name: 'Mutton Biryani',
-            price: '₹200',
-            description: '1pc Mutton, 1pc Aloo, 1pc Egg',
+            price: '₹230',
+            description: '1pc Mutton, 1pc Aloo, 1pc Egg — subject to availability',
           },
         ],
       },
@@ -79,15 +79,38 @@ export const MENU_SECTIONS: MenuSection[] = [
   {
     id: 'starters',
     title: 'Starters',
-    emoji: '🥟',
+    emoji: '🌶️',
     subsections: [
       {
         title: 'Indo-Chinese Appetizers',
         items: [
-          { name: 'Chilli Chicken (Dry / Gravy)', price: '₹120' },
+          { name: 'Chilli Chicken (Dry / Gravy)', price: '₹130' },
           { name: 'Chilli Paneer (Dry / Gravy)', price: '₹120' },
           { name: 'Hot Garlic Chicken', price: '₹150' },
           { name: 'Honey Chicken (Crispy & Glazed)', price: '₹150' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'momos',
+    title: 'Momos',
+    emoji: '🥟',
+    subsections: [
+      {
+        title: 'Steamed Momos (6 pcs)',
+        items: [
+          { name: 'Veg Steamed Momo', price: '₹60', description: 'Classic vegetable filling' },
+          { name: 'Paneer Steamed Momo', price: '₹70' },
+          { name: 'Chicken Steamed Momo', price: '₹80', featured: true },
+        ],
+      },
+      {
+        title: 'Fried & Special Momos (6 pcs)',
+        items: [
+          { name: 'Veg Fried Momo', price: '₹70' },
+          { name: 'Chicken Fried Momo', price: '₹90' },
+          { name: 'Schezwan Momo', price: 'Veg ₹80 | Chicken ₹100' },
         ],
       },
     ],
@@ -114,6 +137,48 @@ export const MENU_SECTIONS: MenuSection[] = [
     ],
   },
   {
+    id: 'tandoor',
+    title: 'Tandoor',
+    emoji: '🔥',
+    subsections: [
+      {
+        title: 'Kebabs & Tikka',
+        items: [
+          { name: 'Paneer Tikka (8 pcs)', price: '₹180', featured: true },
+          { name: 'Chicken Tikka (8 pcs)', price: '₹200', featured: true },
+          { name: 'Malai Chicken Tikka (8 pcs)', price: '₹220' },
+          { name: 'Hariyali Chicken Tikka (8 pcs)', price: '₹220' },
+          { name: 'Chicken Seekh Kebab (2 pcs)', price: '₹180' },
+          { name: 'Tandoori Chicken (Half)', price: '₹180', description: 'Marinated & clay-oven roasted' },
+          { name: 'Tandoori Chicken (Full)', price: '₹320' },
+        ],
+      },
+      {
+        title: 'Naan & Kulcha',
+        items: [
+          { name: 'Plain Naan', price: '₹30' },
+          { name: 'Butter Naan', price: '₹40' },
+          { name: 'Garlic Naan', price: '₹50' },
+          { name: 'Cheese Naan', price: '₹70' },
+          { name: 'Garlic Cheese Naan', price: '₹80' },
+          { name: 'Plain Kulcha', price: '₹35' },
+          { name: 'Butter Kulcha', price: '₹45' },
+          { name: 'Aloo Kulcha', price: '₹55' },
+          { name: 'Paneer Kulcha', price: '₹65' },
+          { name: 'Mix Kulcha', price: '₹70', description: 'Aloo & paneer stuffing' },
+        ],
+      },
+      {
+        title: 'Tandoori Roti',
+        items: [
+          { name: 'Tandoori Roti', price: '₹15' },
+          { name: 'Butter Roti', price: '₹20' },
+          { name: 'Roomali Roti', price: '₹25' },
+        ],
+      },
+    ],
+  },
+  {
     id: 'wok-rolls',
     title: 'Wok & Rolls',
     emoji: '🍜',
@@ -121,7 +186,7 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Fried Rice & Noodles',
         items: [
-          { name: 'Fried Rice', price: 'Egg ₹70 | Chicken ₹90 | Mixed ₹110' },
+          { name: 'Fried Rice', price: 'Egg ₹80 | Chicken ₹90 | Mixed ₹110' },
           { name: 'Noodles', price: 'Veg ₹60 | Egg ₹70 | Chicken ₹90 | Mixed ₹110' },
         ],
       },
@@ -147,6 +212,10 @@ export const MENU_SECTIONS: MenuSection[] = [
           { name: 'Aloo Paratha', price: '₹40' },
           { name: 'Paneer Paratha', price: '₹45' },
         ],
+      },
+      {
+        title: 'Sides',
+        items: [{ name: 'Dal Fry', price: '₹60' }],
       },
       {
         title: 'Rice & Pulao',

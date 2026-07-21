@@ -256,7 +256,7 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Dessert',
         items: [
-          { name: 'Fried Ice Cream', price: '₹80', featured: true },
+          { name: 'Fried Ice Cream', price: '₹100', featured: true },
         ],
       },
     ],

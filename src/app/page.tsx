@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { Hero } from '@/components/sections/Hero';
+import { OpeningBanner } from '@/components/sections/OpeningBanner';
 
 const About = dynamic(() => import('@/components/sections/About').then((m) => m.About));
 const Specialities = dynamic(() =>
@@ -17,7 +17,7 @@ const Contact = dynamic(() => import('@/components/sections/Contact').then((m) =
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <OpeningBanner />
       <About />
       <Specialities />
       <FullMenu />

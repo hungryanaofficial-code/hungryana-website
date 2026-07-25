@@ -50,7 +50,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-charcoal-dark">
+    <section id="contact" className="section-padding section-glow bg-charcoal-dark">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Get In Touch"
@@ -67,7 +67,10 @@ export function Contact() {
           >
             <div className="glass-gold rounded-2xl p-6 md:p-8">
               <h3 className="font-display text-2xl font-bold text-warm-white">{SITE.name}</h3>
-              <p className="mt-1 text-gold">{SITE.tagline}</p>
+              <p className="font-body text-lg text-gold/80" lang="bn">
+                {SITE.nameBengali}
+              </p>
+              <p className="mt-1 font-display text-gold">{SITE.tagline}</p>
 
               <ul className="mt-8 space-y-5">
                 <li className="flex items-start gap-4">
@@ -145,7 +148,7 @@ export function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 md:p-8">
+              <form onSubmit={handleSubmit} className="premium-card rounded-2xl p-6 md:p-8">
                 <h3 className="mb-6 font-display text-xl font-semibold text-warm-white">
                   Send Us a Message
                 </h3>
@@ -238,7 +241,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-12 overflow-hidden rounded-2xl"
+          className="mt-12 overflow-hidden rounded-2xl border border-gold/20 shadow-xl shadow-black/40"
         >
           <div className="relative aspect-[21/9] min-h-[250px] bg-charcoal-light">
             <iframe
@@ -248,7 +251,7 @@ export function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="pointer-events-none absolute inset-0 ring-2 ring-red/20 ring-inset" />
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-gold/25 ring-inset" />
           </div>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Mail, Twitter, Youtube } from 'lucide-react';
-import { CUISINE_CATEGORIES, NAV_LINKS, SITE, SOCIAL_LINKS } from '@/lib/constants';
+import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from 'lucide-react';
+import { CUISINE_CATEGORIES, NAV_LINKS, PHONE_TEL, SITE, SOCIAL_LINKS } from '@/lib/constants';
 import { LogoImage } from '@/components/ui/LogoImage';
 
 const socialIcons = {
@@ -14,23 +14,34 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t-2 border-red/30 bg-black">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+    <footer className="relative border-t border-gold/15 bg-black">
+      <div className="ornament-line absolute inset-x-0 top-0" aria-hidden="true" />
+      <div className="section-glow mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="#home" className="inline-flex flex-col items-start gap-2">
               <LogoImage size="xl" className="logo-glow" />
+              <p className="font-body text-lg text-gold/80" lang="bn">
+                {SITE.nameBengali}
+              </p>
               <p className="font-display text-base tracking-wide text-gold">{SITE.tagline}</p>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-cream/60">
-              Multi-cuisine dining in <strong className="text-gold">{SITE.locality}, {SITE.district}</strong>.
-              Biryani, Pizza, Indian, Chinese &amp; more under one roof.
+              Multi-cuisine dining in{' '}
+              <strong className="text-gold">
+                {SITE.locality}, {SITE.district}
+              </strong>
+              . Biryani, Pizza, Indian, Chinese &amp; more under one roof.
+            </p>
+            <p className="mt-3 flex items-center gap-1.5 text-xs text-cream/45">
+              <MapPin className="h-3 w-3 text-gold/60" aria-hidden="true" />
+              Proudly serving Kirnahar &amp; Birbhum
             </p>
           </div>
 
           <div>
-            <h3 className="mb-4 font-display text-lg font-semibold text-gold">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="mb-4 font-display text-lg tracking-wide text-gold">Quick Links</h3>
+            <ul className="space-y-2.5">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -45,8 +56,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 font-display text-lg font-semibold text-gold">Our Cuisines</h3>
-            <ul className="space-y-2">
+            <h3 className="mb-4 font-display text-lg tracking-wide text-gold">Our Cuisines</h3>
+            <ul className="space-y-2.5">
               {CUISINE_CATEGORIES.map((category) => (
                 <li key={category}>
                   <Link
@@ -61,8 +72,18 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 font-display text-xl tracking-wide text-gold text-shadow-brand">Contact Us</h3>
-            <p className="mb-3 text-sm text-cream/70">{SITE.address}</p>
+            <h3 className="mb-4 font-display text-xl tracking-wide text-gold text-shadow-brand">
+              Contact Us
+            </h3>
+            <p className="mb-3 text-sm leading-relaxed text-cream/70">{SITE.address}</p>
+            <a
+              href={PHONE_TEL}
+              className="mb-2 inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-gold"
+            >
+              <Phone className="h-4 w-4 text-gold" />
+              {SITE.phone}
+            </a>
+            <br />
             <a
               href={`mailto:${SITE.email}`}
               className="inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-gold"
@@ -79,7 +100,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full bg-charcoal-light p-2.5 text-cream/70 transition-all hover:bg-red hover:text-gold"
+                    className="rounded-full border border-gold/15 bg-charcoal-light p-2.5 text-cream/70 transition-all hover:border-gold/40 hover:bg-red hover:text-gold"
                     aria-label={social.label}
                   >
                     <Icon className="h-4 w-4" />
@@ -90,12 +111,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-red/20 pt-8 md:flex-row">
+        <div className="ornament-line mt-12" aria-hidden="true" />
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-cream/50">
             &copy; {year} {SITE.name} — {SITE.locality}, {SITE.district}
           </p>
           <p className="text-sm text-cream/50">
-            Crafted with passion for food lovers everywhere.
+            Eat Hearty, Stay Hungry · Crafted with passion for food lovers everywhere.
           </p>
         </div>
       </div>

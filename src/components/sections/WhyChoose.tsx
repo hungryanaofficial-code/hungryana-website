@@ -7,7 +7,7 @@ import { WHY_CHOOSE } from '@/lib/images';
 
 export function WhyChoose() {
   return (
-    <section id="why-us" className="section-padding bg-charcoal">
+    <section id="why-us" className="section-padding section-glow bg-charcoal">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="The Hungryana Difference"
@@ -24,7 +24,7 @@ export function WhyChoose() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               whileHover={{ scale: 1.02 }}
-              className="glass group rounded-2xl p-6 transition-colors hover:border-gold/30"
+              className="premium-card group rounded-2xl p-6 transition-colors hover:border-gold/30"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 transition-colors group-hover:bg-gold/20">
                 <Check className="h-6 w-6 text-gold" strokeWidth={2.5} />

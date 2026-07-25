@@ -31,7 +31,7 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="mb-3 font-display text-base uppercase tracking-[0.2em] text-gold text-shadow-brand">
+        <p className="mb-3 font-display text-sm uppercase tracking-[0.25em] text-gold text-shadow-brand md:text-base">
           {eyebrow}
         </p>
       )}
@@ -39,15 +39,18 @@ export function SectionHeading({
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base leading-relaxed text-cream/80 md:text-lg">{subtitle}</p>
+        <p className="mt-4 text-base leading-relaxed text-cream/75 md:text-lg">{subtitle}</p>
       )}
       <div
-        className={clsx(
-          'mt-6 h-1.5 w-20 rounded-full bg-gradient-to-r from-red via-gold to-orange',
-          align === 'center' && 'mx-auto'
-        )}
+        className={clsx('mt-6 flex items-center gap-3', align === 'center' && 'justify-center')}
         aria-hidden="true"
-      />
+      >
+        <span className="h-px w-8 bg-gradient-to-r from-transparent to-gold/50" />
+        <span className="h-1.5 w-1.5 rounded-full bg-red" />
+        <span className="h-1 w-16 rounded-full bg-gradient-to-r from-red via-gold to-orange" />
+        <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+        <span className="h-px w-8 bg-gradient-to-l from-transparent to-gold/50" />
+      </div>
     </motion.div>
   );
 }

@@ -14,7 +14,7 @@ export function Gallery() {
   const galleryImages = GALLERY_ITEMS.map((item) => ({ src: item.src, alt: item.alt }));
 
   return (
-    <section id="gallery" className="section-padding bg-charcoal-dark">
+    <section id="gallery" className="section-padding section-glow bg-charcoal-dark">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Visual Feast"
@@ -32,7 +32,7 @@ export function Gallery() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               onClick={() => setLightboxIndex(index)}
-              className="group relative mb-4 block w-full overflow-hidden rounded-xl break-inside-avoid focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className="group relative mb-4 block w-full overflow-hidden rounded-xl border border-gold/10 break-inside-avoid transition-all hover:border-gold/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               aria-label={`View ${item.alt} in lightbox`}
             >
               <Image

@@ -26,7 +26,7 @@ export function Testimonials() {
   const testimonial = TESTIMONIALS[current];
 
   return (
-    <section id="testimonials" className="section-padding bg-charcoal">
+    <section id="testimonials" className="section-padding section-glow bg-charcoal">
       <div className="mx-auto max-w-4xl">
         <SectionHeading
           eyebrow="Guest Reviews"

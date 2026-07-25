@@ -19,11 +19,11 @@ interface ButtonProps {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    'bg-red text-gold font-display tracking-wider btn-pop hover:bg-red-dark hover:text-gold-light',
+    'btn-gradient-primary text-gold font-display tracking-wider btn-pop hover:brightness-110 hover:text-gold-light',
   secondary:
-    'bg-charcoal-light text-cream border-2 border-red/40 hover:border-gold hover:bg-charcoal font-semibold',
+    'bg-charcoal-light text-cream border border-red/35 hover:border-gold/50 hover:bg-charcoal font-semibold',
   outline:
-    'bg-transparent text-gold border-2 border-gold btn-pop-gold hover:bg-gold hover:text-charcoal-dark font-display tracking-wider',
+    'bg-black/40 text-gold border border-gold/60 backdrop-blur-sm btn-pop-gold hover:bg-gold/10 hover:border-gold font-display tracking-wider',
 };
 
 export function Button({

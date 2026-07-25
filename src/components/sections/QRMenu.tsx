@@ -11,7 +11,7 @@ import { SITE_URL } from '@/lib/site';
 export function QRMenu() {
   const [qrSrc, setQrSrc] = useState('/qr-menu.png');
   return (
-    <section id="qr-menu" className="section-padding bg-charcoal-dark">
+    <section id="qr-menu" className="section-padding section-glow bg-charcoal-dark">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Digital Menu"

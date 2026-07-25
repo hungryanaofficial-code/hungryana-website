@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'Eat Hearty, Stay Hungry',
   taglineAlt: 'One Destination, Endless Flavours',
   email: 'hungryana.official@gmail.com',
-  phone: '+91 98765 43210',
+  phone: '+91 83898 77242',
   address: 'Kirnahar, Birbhum, West Bengal, India',
   locality: 'Kirnahar',
   district: 'Birbhum',

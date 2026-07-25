@@ -24,7 +24,7 @@ export function About() {
   const imageY = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
-    <section id="about" ref={ref} className="section-padding bg-black">
+    <section id="about" ref={ref} className="section-padding section-glow bg-black">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Our Story"
@@ -35,7 +35,7 @@ export function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
             style={{ y: imageY }}
-            className="relative aspect-[4/5] overflow-hidden rounded-2xl"
+            className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-gold/15 shadow-2xl shadow-black/50"
           >
             <Image
               src={IMAGES.about}
@@ -81,7 +81,7 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass flex items-center gap-3 rounded-xl p-4"
+                  className="premium-card flex items-center gap-3 rounded-xl p-4"
                 >
                   <div className="rounded-lg bg-gold/10 p-2">
                     <Icon className="h-5 w-5 text-gold" />

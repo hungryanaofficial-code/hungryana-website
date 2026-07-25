@@ -36,15 +36,8 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 lg:px-8">
-        <Link
-          href="#home"
-          className="group flex shrink-0 flex-col items-start gap-0.5"
-          aria-label={`${SITE.name} home`}
-        >
+        <Link href="#home" className="group flex shrink-0 items-center" aria-label={`${SITE.name} home`}>
           <LogoImage size="lg" className="logo-glow transition-transform group-hover:scale-105" />
-          <span className="hidden text-[10px] tracking-widest text-gold/60 sm:block" lang="bn">
-            {SITE.nameBengali}
-          </span>
         </Link>
 
         <nav

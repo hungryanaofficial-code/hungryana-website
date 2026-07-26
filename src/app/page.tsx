@@ -5,13 +5,10 @@ const About = dynamic(() => import('@/components/sections/About').then((m) => m.
 const Specialities = dynamic(() =>
   import('@/components/sections/Specialities').then((m) => m.Specialities)
 );
-const FullMenu = dynamic(() => import('@/components/sections/FullMenu').then((m) => m.FullMenu));
-const QRMenu = dynamic(() => import('@/components/sections/QRMenu').then((m) => m.QRMenu));
-const WhyChoose = dynamic(() => import('@/components/sections/WhyChoose').then((m) => m.WhyChoose));
-const Gallery = dynamic(() => import('@/components/sections/Gallery').then((m) => m.Gallery));
-const Testimonials = dynamic(() =>
-  import('@/components/sections/Testimonials').then((m) => m.Testimonials)
+const MenuPreview = dynamic(() =>
+  import('@/components/sections/MenuPreview').then((m) => m.MenuPreview)
 );
+const QRMenu = dynamic(() => import('@/components/sections/QRMenu').then((m) => m.QRMenu));
 const Contact = dynamic(() => import('@/components/sections/Contact').then((m) => m.Contact));
 
 export default function HomePage() {
@@ -20,11 +17,8 @@ export default function HomePage() {
       <OpeningBanner />
       <About />
       <Specialities />
-      <FullMenu />
+      <MenuPreview />
       <QRMenu />
-      <WhyChoose />
-      <Gallery />
-      <Testimonials />
       <Contact />
     </>
   );

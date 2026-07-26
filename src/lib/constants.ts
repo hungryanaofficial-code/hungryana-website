@@ -14,12 +14,24 @@ export const SITE = {
 /** Use for `href` on call-to-order buttons and phone links */
 export const PHONE_TEL = `tel:${SITE.phone.replace(/\s/g, '')}`;
 
+export const ABOUT_STORY = {
+  intro:
+    'Hungryana is a joint initiative — born from the friendship of a passionate foodie and an experienced cook who share one belief: great food should feel honest, generous, and worth coming back for.',
+  foodie: {
+    title: 'The Foodie',
+    text: 'Years of tasting flavours across India — from biryanis and Mughlai curries to wok-tossed noodles and wood-fired pizzas. Every plate explored became an idea for what Kirnahar deserved on its own doorstep.',
+  },
+  cook: {
+    title: 'The Cook',
+    text: 'Hands-on experience across Indian, Chinese, Italian, and tandoor cooking. Knows how to balance spice, texture, and portion — turning those ideas into dishes that arrive hot, fresh, and full of flavour.',
+  },
+  closing: `Together, they built Hungryana in ${SITE.locality}, ${SITE.district} — a neighbourhood kitchen where multiple cuisines live under one roof. Not a fancy franchise. Just food made with care, for families, friends, and anyone who loves a good meal.`,
+} as const;
+
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Specialities', href: '#specialities' },
-  { label: 'Menu', href: '#full-menu' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Menu', href: '/menu' },
   { label: 'Contact', href: '#contact' },
 ] as const;
 
@@ -38,11 +50,10 @@ export const SOCIAL_LINKS = [
 
 export const CUISINE_CATEGORIES = [
   'Biryani',
-  'Pizza',
-  'Indian Cuisine',
-  'Chinese Cuisine',
-  'Pasta',
-  'Fast Food',
-  'Beverages',
-  'Desserts',
+  'Pizza & Pasta',
+  'Indian Main Course',
+  'Chinese & Wok',
+  'Momos & Starters',
+  'Tandoor',
+  'Beverages & Dessert',
 ] as const;

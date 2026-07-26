@@ -1,78 +1,39 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { QrCode, Smartphone } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { SITE_URL } from '@/lib/site';
 
 export function QRMenu() {
   const [qrSrc, setQrSrc] = useState('/qr-menu.png');
+
   return (
-    <section id="qr-menu" className="section-padding section-glow bg-charcoal-dark">
-      <div className="mx-auto max-w-7xl">
+    <section id="qr-menu" className="section-padding bg-black">
+      <div className="mx-auto max-w-3xl text-center">
         <SectionHeading
           eyebrow="Digital Menu"
-          title="Scan & Explore Our Digital Menu"
-          subtitle="Scan with your phone to open our full menu instantly."
+          title="Scan to Browse"
+          subtitle="Open our full menu on your phone — no app needed."
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="glass-gold mx-auto flex max-w-4xl flex-col items-center gap-10 rounded-3xl p-8 md:flex-row md:p-12"
-        >
-          <div className="relative shrink-0">
-            <div className="rounded-2xl border-4 border-red bg-warm-white p-5 shadow-2xl shadow-red/30">
-              <Image
-                src={qrSrc}
-                alt="QR code to browse Hungryana digital menu"
-                width={260}
-                height={260}
-                className="h-[240px] w-[240px] object-contain md:h-[260px] md:w-[260px]"
-                onError={() => setQrSrc('/qr-menu.svg')}
-              />
-            </div>
-            <div className="absolute -right-3 -top-3 rounded-full bg-red p-3 text-gold shadow-lg btn-pop">
-              <QrCode className="h-6 w-6" />
-            </div>
-          </div>
-
-          <div className="text-center md:text-left">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-red/30 bg-red/10 px-4 py-1.5 text-sm text-gold">
-              <Smartphone className="h-4 w-4" />
-              Contactless Menu
-            </div>
-            <p className="text-lg leading-relaxed text-cream/80">
-              Scan the QR code to open our menu at{' '}
-              <span className="text-gold">{SITE_URL}/menu</span>
-            </p>
-            <Link
-              href="/menu"
-              className="mt-4 inline-block font-display text-lg tracking-wide text-gold underline-offset-4 hover:text-gold-light hover:underline"
-            >
-              Or open menu directly →
+        <div className="mx-auto inline-block rounded-xl border border-gold/15 bg-charcoal-light/40 p-6">
+          <Image
+            src={qrSrc}
+            alt="QR code to browse Hungryana digital menu"
+            width={220}
+            height={220}
+            className="mx-auto h-[200px] w-[200px] object-contain"
+            onError={() => setQrSrc('/qr-menu.svg')}
+          />
+          <p className="mt-4 text-sm text-cream/60">
+            Or visit{' '}
+            <Link href="/menu" className="text-gold hover:underline">
+              {SITE_URL}/menu
             </Link>
-            <ul className="mt-6 space-y-2 text-left text-sm text-cream/70">
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-red" />
-                Full menu with prices and descriptions
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-                Chef specials marked with ★
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-orange" />
-                Easy to share with your table
-              </li>
-            </ul>
-          </div>
-        </motion.div>
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -61,7 +61,7 @@ export function Footer() {
               {CUISINE_CATEGORIES.map((category) => (
                 <li key={category}>
                   <Link
-                    href="#full-menu"
+                    href="/menu"
                     className="text-sm text-cream/70 transition-colors hover:text-gold"
                   >
                     {category}

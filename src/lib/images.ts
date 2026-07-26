@@ -6,9 +6,11 @@ export const IMAGES = {
     'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80',
     'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80',
   ],
-  biryani: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80',
+  sizzler: 'https://images.unsplash.com/photo-1514536958296-436f46226e74?w=800&q=80',
+  biryani: 'https://images.unsplash.com/photo-1772469597765-ff29d5616fb7?w=800&q=80',
   pizza: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80',
-  butterChicken: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
+  butterChicken: 'https://images.unsplash.com/photo-1742599361498-79824d24e355?w=800&q=80',
+  lassi: 'https://images.unsplash.com/photo-1716441392930-b4daa288266a?w=800&q=80',
   hakkaNoodles: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80',
   chowmein: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80',
   mughlai: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80',
@@ -25,7 +27,7 @@ export const SPECIALITIES = [
   {
     title: 'Hungryana Special Chicken Sizzler',
     description: 'Grilled chicken, sautéed veggies, and fries on a smoking plate.',
-    image: IMAGES.mughlai,
+    image: IMAGES.sizzler,
   },
   {
     title: 'Chicken Biryani',
@@ -50,7 +52,7 @@ export const SPECIALITIES = [
   {
     title: 'Hungryana Special Lassi',
     description: 'Signature lassi with coconut, banana, kaju, and kismiss.',
-    image: IMAGES.mocktail,
+    image: IMAGES.lassi,
   },
 ] as const;
 

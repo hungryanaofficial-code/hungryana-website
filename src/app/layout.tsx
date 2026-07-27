@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Bangers, Hind_Siliguri } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { MobileNav } from '@/components/layout/MobileNav';
 import { SkipLink } from '@/components/ui/SkipLink';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { BUSINESS_HOURS, SITE } from '@/lib/constants';
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <MobileNav />
         <WhatsAppButton />
       </body>
     </html>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { CUISINE_CATEGORIES, PHONE_TEL, SITE } from '@/lib/constants';
@@ -8,53 +9,51 @@ export function MenuPreview() {
   const picks = SPECIALITIES.slice(0, 4);
 
   return (
-    <section id="menu-preview" className="section-padding bg-charcoal-dark">
+    <section id="menu-preview" className="section-padding section-glow bg-charcoal-dark">
       <div className="mx-auto max-w-4xl">
         <SectionHeading
-          eyebrow="Our Menu"
-          title="Flavours Under One Roof"
-          subtitle={`${SITE.tagline} — Biryani, Pizza, Indian, Chinese, Tandoor & more.`}
+          eyebrow="Menu"
+          title="Pick Your Flavour"
+          subtitle={`${SITE.tagline} — scroll the full menu or call to order.`}
         />
 
         <div className="mb-8 flex flex-wrap justify-center gap-2">
           {CUISINE_CATEGORIES.map((category) => (
-            <span
+            <Link
               key={category}
-              className="rounded-full border border-gold/15 px-4 py-1.5 text-sm text-cream/75"
+              href="/menu"
+              className="rounded-full border border-gold/15 bg-black/30 px-3.5 py-1.5 text-sm text-cream/75 transition-colors hover:border-orange/50 hover:text-gold"
             >
               {category}
-            </span>
+            </Link>
           ))}
         </div>
 
-        <ul className="mb-8 divide-y divide-gold/10 rounded-xl border border-gold/10 bg-charcoal-light/30">
+        <div className="mb-8 grid gap-4 sm:grid-cols-2">
           {picks.map((item) => (
-            <li key={item.title} className="flex items-center justify-between gap-4 px-5 py-4">
-              <div>
-                <p className="font-medium text-warm-white">{item.title}</p>
-                <p className="mt-0.5 text-sm text-cream/60">{item.description}</p>
+            <div
+              key={item.title}
+              className="flex gap-3 overflow-hidden rounded-xl border border-gold/10 bg-black/40"
+            >
+              <div className="relative h-24 w-24 shrink-0 sm:h-auto sm:w-28">
+                <Image src={item.image} alt={item.title} fill className="object-cover" sizes="112px" />
               </div>
-              <span className="shrink-0 text-xs uppercase tracking-wider text-gold">★</span>
-            </li>
+              <div className="flex flex-col justify-center py-3 pr-3">
+                <p className="font-medium text-warm-white">{item.title}</p>
+                <p className="mt-0.5 line-clamp-2 text-xs text-cream/55">{item.description}</p>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
 
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <Button href="/menu" variant="primary" ariaLabel="View full menu">
-            View Full Menu
+          <Button href="/menu" variant="primary" ariaLabel="View full menu with prices">
+            Full Menu &amp; Prices
           </Button>
           <Button href={PHONE_TEL} variant="outline" ariaLabel="Call to order">
-            Order Now
+            Call {SITE.phone}
           </Button>
         </div>
-
-        <p className="mt-6 text-center text-sm text-cream/50">
-          Full menu with prices on the{' '}
-          <Link href="/menu" className="text-gold underline-offset-2 hover:underline">
-            menu page
-          </Link>
-          {' '}or scan the QR code below.
-        </p>
       </div>
     </section>
   );

@@ -1,126 +1,58 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from 'lucide-react';
-import { CUISINE_CATEGORIES, NAV_LINKS, PHONE_TEL, SITE, SOCIAL_LINKS } from '@/lib/constants';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import { NAV_LINKS, OPENING, PHONE_TEL, SITE } from '@/lib/constants';
 import { LogoImage } from '@/components/ui/LogoImage';
-
-const socialIcons = {
-  instagram: Instagram,
-  facebook: Facebook,
-  twitter: Twitter,
-  youtube: Youtube,
-} as const;
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-gold/15 bg-black">
-      <div className="ornament-line absolute inset-x-0 top-0" aria-hidden="true" />
-      <div className="section-glow mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-gold/10 bg-black pb-20 md:pb-0">
+      <div className="mx-auto max-w-4xl px-5 py-12">
+        <div className="flex flex-col items-center text-center md:flex-row md:items-start md:justify-between md:text-left">
           <div>
-            <Link href="#home" className="inline-flex flex-col items-start gap-2">
-              <LogoImage size="xl" className="logo-glow" />
-              <p className="font-body text-lg text-gold/80" lang="bn">
-                {SITE.nameBengali}
-              </p>
-              <p className="font-display text-base tracking-wide text-gold">{SITE.tagline}</p>
+            <Link href="#home">
+              <LogoImage size="md" />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-cream/60">
-              Multi-cuisine dining in{' '}
-              <strong className="text-gold">
-                {SITE.locality}, {SITE.district}
-              </strong>
-              . Biryani, Pizza, Indian, Chinese &amp; more under one roof.
+            <p className="mt-2 text-sm text-gold/80" lang="bn">
+              {SITE.nameBengali}
             </p>
-            <p className="mt-3 flex items-center gap-1.5 text-xs text-cream/45">
-              <MapPin className="h-3 w-3 text-gold/60" aria-hidden="true" />
-              Proudly serving Kirnahar &amp; Birbhum
+            <p className="mt-1 text-xs text-cream/50">
+              Opening {OPENING.date} · {OPENING.location}
             </p>
           </div>
 
-          <div>
-            <h3 className="mb-4 font-display text-lg tracking-wide text-gold">Quick Links</h3>
-            <ul className="space-y-2.5">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-cream/70 transition-colors hover:text-gold"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-display text-lg tracking-wide text-gold">Our Cuisines</h3>
-            <ul className="space-y-2.5">
-              {CUISINE_CATEGORIES.map((category) => (
-                <li key={category}>
-                  <Link
-                    href="/menu"
-                    className="text-sm text-cream/70 transition-colors hover:text-gold"
-                  >
-                    {category}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-display text-xl tracking-wide text-gold text-shadow-brand">
-              Contact Us
-            </h3>
-            <p className="mb-3 text-sm leading-relaxed text-cream/70">{SITE.address}</p>
-            <a
-              href={PHONE_TEL}
-              className="mb-2 inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-gold"
-            >
-              <Phone className="h-4 w-4 text-gold" />
-              {SITE.phone}
-            </a>
-            <br />
-            <a
-              href={`mailto:${SITE.email}`}
-              className="inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-gold"
-            >
-              <Mail className="h-4 w-4 text-gold" />
-              {SITE.email}
-            </a>
-            <div className="mt-6 flex gap-3">
-              {SOCIAL_LINKS.map((social) => {
-                const Icon = socialIcons[social.icon as keyof typeof socialIcons];
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-gold/15 bg-charcoal-light p-2.5 text-cream/70 transition-all hover:border-gold/40 hover:bg-red hover:text-gold"
-                    aria-label={social.label}
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
+          <nav className="mt-8 flex gap-6 md:mt-0" aria-label="Footer navigation">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-cream/60 transition-colors hover:text-gold"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
 
-        <div className="ornament-line mt-12" aria-hidden="true" />
-
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-cream/50">
-            &copy; {year} {SITE.name} — {SITE.locality}, {SITE.district}
-          </p>
-          <p className="text-sm text-cream/50">
-            Eat Hearty, Stay Hungry · Crafted with passion for food lovers everywhere.
-          </p>
+        <div className="mt-8 flex flex-col items-center gap-3 text-sm text-cream/60 md:flex-row md:justify-center md:gap-8">
+          <a href={PHONE_TEL} className="inline-flex items-center gap-2 hover:text-gold">
+            <Phone className="h-4 w-4 text-gold" />
+            {SITE.phone}
+          </a>
+          <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-2 hover:text-gold">
+            <Mail className="h-4 w-4 text-gold" />
+            {SITE.email}
+          </a>
+          <span className="inline-flex items-center gap-2">
+            <MapPin className="h-4 w-4 text-gold" />
+            {SITE.locality}, {SITE.district}
+          </span>
         </div>
+
+        <p className="mt-8 text-center text-xs text-cream/40">
+          &copy; {year} {SITE.name} · {SITE.tagline}
+        </p>
       </div>
     </footer>
   );

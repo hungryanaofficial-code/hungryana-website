@@ -1,0 +1,27 @@
+{
+  "name": "Hungryana — Kirnahar",
+  "short_name": "Hungryana",
+  "description": "Eat Hearty, Stay Hungry. Multi-cuisine restaurant in Kirnahar, Birbhum.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#000000",
+  "theme_color": "#e53935",
+  "lang": "en-IN",
+  "categories": ["food", "restaurants"],
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -35,16 +35,16 @@ export const ABOUT_STORY = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: 'Home', href: '#home', icon: 'home' as const },
-  { label: 'About', href: '#about', icon: 'about' as const },
+  { label: 'Home', href: '/', icon: 'home' as const },
+  { label: 'About', href: '/#about', icon: 'about' as const },
   { label: 'Menu', href: '/menu', icon: 'menu' as const },
-  { label: 'Contact', href: '#contact', icon: 'contact' as const },
+  { label: 'Contact', href: '/#contact', icon: 'contact' as const },
 ] as const;
 
 export const QUICK_LINKS = [
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '/#about' },
   { label: 'Menu', href: '/menu' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/#contact' },
 ] as const;
 
 export const BUSINESS_HOURS = [

@@ -1,10 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Bangers, Hind_Siliguri } from 'next/font/google';
+import { AppShell } from '@/components/layout/AppShell';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileNav } from '@/components/layout/MobileNav';
 import { SkipLink } from '@/components/ui/SkipLink';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { PwaRegister } from '@/components/PwaRegister';
 import { BUSINESS_HOURS, SITE } from '@/lib/constants';
 import { SITE_URL } from '@/lib/site';
 import './globals.css';
@@ -25,6 +27,15 @@ const hind = Hind_Siliguri({
 
 const OG_IMAGE = `${SITE_URL}/logo.svg`;
 
+export const viewport: Viewport = {
+  themeColor: '#e53935',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -44,6 +55,13 @@ export const metadata: Metadata = {
   authors: [{ name: 'Hungryana' }],
   creator: 'Hungryana',
   alternates: { canonical: '/' },
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Hungryana',
+  },
+  applicationName: 'Hungryana',
   openGraph: {
     title: 'Hungryana | Kirnahar, Birbhum',
     description: 'Eat Hearty, Stay Hungry — Multi-cuisine dining in Kirnahar, Birbhum.',
@@ -112,10 +130,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-body antialiased">
+        <PwaRegister />
         <SkipLink />
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <AppShell>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </AppShell>
         <MobileNav />
         <WhatsAppButton />
       </body>

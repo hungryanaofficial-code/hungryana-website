@@ -19,13 +19,56 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background-color: var(--color-charcoal-dark);
+  background-color: #0a0a0a;
   color: var(--color-cream);
   font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App-like shell — centered column on larger screens */
+.app-shell {
+  box-shadow: 0 0 0 1px rgba(255, 193, 7, 0.06);
+}
+
+@media (min-width: 768px) {
+  .app-shell {
+    box-shadow:
+      0 0 80px rgba(0, 0, 0, 0.8),
+      0 0 0 1px rgba(255, 193, 7, 0.08);
+  }
+}
+
+.app-tab-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+#main-content {
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  #main-content {
+    padding-bottom: 2rem;
+  }
+
+  .app-tab-bar {
+    display: none;
+  }
 }
 
 ::selection {
@@ -239,13 +282,6 @@ body {
 @media (min-width: 768px) {
   .section-padding {
     padding: 5rem 2rem;
-  }
-}
-
-/* Space for mobile bottom nav */
-@media (max-width: 767px) {
-  #main-content {
-    padding-bottom: 4.5rem;
   }
 }
 

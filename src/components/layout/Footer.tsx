@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto max-w-4xl px-5 py-12">
         <div className="flex flex-col items-center text-center md:flex-row md:items-start md:justify-between md:text-left">
           <div>
-            <Link href="#home">
+            <Link href="/">
               <LogoImage size="md" />
             </Link>
             <p className="mt-2 text-sm text-gold/80" lang="bn">

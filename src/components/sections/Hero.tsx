@@ -3,10 +3,10 @@
 import Link from 'next/link';
 import { Flame, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { OrderNowButton } from '@/components/ui/OrderNowButton';
 import { LogoImage } from '@/components/ui/LogoImage';
-import { OPENING, PHONE_TEL, QUICK_LINKS, SITE } from '@/lib/constants';
+import { OPENING, QUICK_LINKS, SITE } from '@/lib/constants';
 import { IMAGES } from '@/lib/images';
-
 export function Hero() {
   return (
     <section
@@ -58,14 +58,11 @@ export function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
-          <Button href="/menu" variant="primary" ariaLabel="Browse our menu">
+          <Button href="/menu" variant="secondary" ariaLabel="Browse our menu">
             Browse Menu
           </Button>
-          <Button href={PHONE_TEL} variant="outline" ariaLabel="Call to order">
-            Call to Order
-          </Button>
+          <OrderNowButton />
         </div>
-
         {/* Quick jump — easy navigation */}
         <nav
           className="mt-10 flex flex-wrap items-center justify-center gap-2"

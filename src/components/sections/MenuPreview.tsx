@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { CUISINE_CATEGORIES, PHONE_TEL, SITE } from '@/lib/constants';
-import { SPECIALITIES } from '@/lib/images';
+import { OrderNowButton } from '@/components/ui/OrderNowButton';
+import { CUISINE_CATEGORIES, SITE } from '@/lib/constants';import { SPECIALITIES } from '@/lib/images';
 
 export function MenuPreview() {
   const picks = SPECIALITIES.slice(0, 4);
@@ -50,10 +50,7 @@ export function MenuPreview() {
           <Button href="/menu" variant="primary" ariaLabel="View full menu with prices">
             Full Menu &amp; Prices
           </Button>
-          <Button href={PHONE_TEL} variant="outline" ariaLabel="Call to order">
-            Call {SITE.phone}
-          </Button>
-        </div>
+          <OrderNowButton className="w-full sm:w-auto" />        </div>
       </div>
     </section>
   );

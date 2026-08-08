@@ -1,10 +1,10 @@
 /** Curated Unsplash food photography — production CDN URLs */
 export const IMAGES = {
   heroPizza: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=80',
-  heroKebab: 'https://images.unsplash.com/photo-1742808838159-1848c1a36209?w=1920&q=80',
+  heroKebab: 'https://images.unsplash.com/photo-1529042410751-bffd202cdfaa?w=1920&q=80',
   hero: [
     'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=80',
-    'https://images.unsplash.com/photo-1742808838159-1848c1a36209?w=1920&q=80',
+    'https://images.unsplash.com/photo-1529042410751-bffd202cdfaa?w=1920&q=80',
     'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80',
     'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80',
   ],

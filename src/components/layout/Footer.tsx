@@ -7,8 +7,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gold/10 bg-black pb-20 md:pb-0">
-      <div className="mx-auto max-w-4xl px-5 py-12">
+    <footer className="border-t border-gold/10 bg-black pb-20 lg:pb-8">
+      <div className="mx-auto max-w-6xl px-5 py-12 lg:px-8">
         <div className="flex flex-col items-center text-center md:flex-row md:items-start md:justify-between md:text-left">
           <div>
             <Link href="/">

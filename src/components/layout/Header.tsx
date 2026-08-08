@@ -35,12 +35,12 @@ export function Header() {
         scrolled ? 'border-b border-gold/10 bg-black/95 py-2 backdrop-blur-xl' : 'bg-black/80 py-2.5 backdrop-blur-md'
       )}
     >
-      <div className="mx-auto flex max-w-lg items-center justify-between gap-2 px-4 md:max-w-2xl lg:max-w-3xl">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 lg:px-8">
         <Link href={homeHref} className="shrink-0" aria-label={`${SITE.name} home`}>
           <LogoImage size="sm" className="transition-transform active:scale-95" />
         </Link>
 
-        <nav className="hidden items-center gap-0.5 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -53,10 +53,10 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <OrderNowButton compact className="hidden md:inline-flex" />
+          <OrderNowButton compact className="hidden lg:inline-flex" />
           <a
             href={PHONE_TEL}
-            className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-red to-red-dark p-2.5 text-gold shadow-md shadow-red/30 md:hidden"
+            className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-red to-red-dark p-2.5 text-gold shadow-md shadow-red/30 lg:hidden"
             aria-label="Order now — call restaurant"
           >
             <Phone className="h-5 w-5" />
@@ -64,7 +64,7 @@ export function Header() {
 
           <button
             type="button"
-            className="rounded-lg p-2 text-gold md:hidden"
+            className="rounded-lg p-2 text-gold lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -78,7 +78,7 @@ export function Header() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="border-t border-gold/10 bg-black/98 backdrop-blur-xl md:hidden"
+          className="border-t border-gold/10 bg-black/98 backdrop-blur-xl lg:hidden"
         >
           <nav className="flex flex-col px-4 py-3" aria-label="Mobile menu">
             {NAV_LINKS.map((link) => (

@@ -85,7 +85,7 @@ export function MenuView({ showHeading = true }: MenuViewProps) {
         </div>
       </div>
 
-      <div className="space-y-10 px-5 pt-6">
+      <div className="mx-auto max-w-3xl space-y-10 px-5 pt-6 lg:max-w-4xl lg:px-8">
         {MENU_SECTIONS.map((section) => (
           <div key={section.id} id={`menu-${section.id}`} className="scroll-mt-36">
             <h3 className="mb-4 flex items-center gap-2 border-b border-gold/15 pb-3 font-display text-xl text-warm-white">
@@ -133,8 +133,8 @@ export function MenuView({ showHeading = true }: MenuViewProps) {
         ))}
       </div>
 
-      <div className="sticky bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-30 mx-5 mt-8 md:bottom-6">
-        <OrderNowButton className="w-full !py-4 text-lg" showPhone />
+      <div className="sticky bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-30 mx-auto mt-8 max-w-3xl px-5 lg:static lg:max-w-4xl lg:px-8 lg:pt-4">
+        <OrderNowButton className="w-full !py-4 text-lg lg:!py-3" showPhone />
       </div>
     </section>
   );

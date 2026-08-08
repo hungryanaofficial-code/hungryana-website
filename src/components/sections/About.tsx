@@ -7,7 +7,7 @@ import { IMAGES } from '@/lib/images';
 export function About() {
   return (
     <section id="about" className="section-padding bg-black">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-6xl lg:max-w-7xl">
         <SectionHeading
           eyebrow="About Us"
           title="Two Friends, One Kitchen"

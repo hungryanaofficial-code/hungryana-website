@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function MenuPage() {
   return (
-    <div className="min-h-screen bg-black pt-16 pb-28">
-      <div className="px-5 pt-2">
+    <div className="min-h-screen bg-black pt-16 pb-28 lg:pb-12">
+      <div className="mx-auto max-w-7xl px-5 pt-2 lg:px-8">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-sm text-cream/60 transition-colors active:text-gold"

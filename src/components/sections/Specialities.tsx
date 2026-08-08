@@ -8,7 +8,7 @@ const FEATURED = SPECIALITIES.slice(0, 3);
 export function Specialities() {
   return (
     <section id="specialities" className="section-padding bg-charcoal-dark">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-6xl lg:max-w-7xl">
         <SectionHeading
           eyebrow="Must Try"
           title="Spicy Favourites"

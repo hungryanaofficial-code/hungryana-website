@@ -28,7 +28,7 @@ export function Hero() {
       <div className="hero-overlay absolute inset-0" aria-hidden="true" />
       <div className="spicy-glow absolute inset-0" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto w-full max-w-4xl px-5 text-center">
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-5 text-center lg:max-w-6xl">
         {/* Opening badge — no promo banner image */}
         <div className="opening-badge mx-auto mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold tracking-wide">
           <Flame className="h-4 w-4 text-orange" aria-hidden="true" />

@@ -10,7 +10,7 @@ export function MenuPreview() {
 
   return (
     <section id="menu-preview" className="section-padding section-glow bg-charcoal-dark">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-6xl lg:max-w-7xl">
         <SectionHeading
           eyebrow="Menu"
           title="Pick Your Flavour"

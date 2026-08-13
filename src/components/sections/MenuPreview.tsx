@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { OrderNowButton } from '@/components/ui/OrderNowButton';
-import { CUISINE_CATEGORIES, SITE } from '@/lib/constants';import { SPECIALITIES } from '@/lib/images';
+import { CUISINE_CATEGORIES, SITE } from '@/lib/constants';
+import { SPECIALITIES } from '@/lib/images';
 
 export function MenuPreview() {
   const picks = SPECIALITIES.slice(0, 4);

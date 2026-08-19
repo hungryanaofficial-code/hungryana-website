@@ -48,8 +48,8 @@ export function MenuPreview() {
         </div>
 
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <Button href="/menu" variant="primary" ariaLabel="View full menu with prices">
-            Full Menu &amp; Prices
+          <Button href="/menu" variant="primary" ariaLabel="View full menu">
+            Full Menu
           </Button>
           <OrderNowButton className="w-full sm:w-auto" />        </div>
       </div>

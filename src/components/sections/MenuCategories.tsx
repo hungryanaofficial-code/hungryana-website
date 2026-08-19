@@ -14,7 +14,7 @@ export function MenuCategories() {
         <SectionHeading
           eyebrow="Explore"
           title="Menu Categories"
-          subtitle="Browse by cuisine — then dive into our full menu with prices."
+          subtitle="Browse by cuisine — then dive into our full menu."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

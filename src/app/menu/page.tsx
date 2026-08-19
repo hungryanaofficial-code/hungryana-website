@@ -6,7 +6,7 @@ import { SITE } from '@/lib/constants';
 
 export const metadata = {
   title: 'Menu | Hungryana — Kirnahar, Birbhum',
-  description: 'Full menu with prices — Biryani, Pizza, Indian, Chinese, Pasta & more at Hungryana.',
+  description: 'Full menu — Biryani, Pizza, Indian, Chinese, Pasta & more at Hungryana.',
 };
 
 export default function MenuPage() {

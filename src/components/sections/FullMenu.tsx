@@ -142,8 +142,6 @@ export function FullMenu() {
 
                           </div>
 
-                          <span className="shrink-0 font-semibold text-gold">{item.price}</span>
-
                         </li>
 
                       ))}

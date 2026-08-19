@@ -122,7 +122,6 @@ export function MenuView({ showHeading = true }: MenuViewProps) {
                             <p className="mt-0.5 text-xs text-cream/50">{item.description}</p>
                           )}
                         </div>
-                        <span className="shrink-0 font-semibold text-gold">{item.price}</span>
                       </li>
                     ))}
                   </ul>

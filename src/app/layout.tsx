@@ -7,6 +7,7 @@ import { MobileNav } from '@/components/layout/MobileNav';
 import { SkipLink } from '@/components/ui/SkipLink';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { PwaRegister } from '@/components/PwaRegister';
+import { Analytics } from '@vercel/analytics/react';
 import { BUSINESS_HOURS, SITE } from '@/lib/constants';
 import { SITE_URL } from '@/lib/site';
 import './globals.css';
@@ -137,6 +138,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </AppShell>
         <MobileNav />
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );

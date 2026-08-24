@@ -29,7 +29,7 @@ export function LogoImage({ size = 'md', className, priority = false }: LogoImag
       width={w}
       height={h}
       className={clsx(cls, 'object-contain logo-glow', className)}
-      onError={() => setSrc('/logo.svg')}
+      onError={() => setSrc('/hungryana-logo.png')}
       priority={priority}
     />
   );

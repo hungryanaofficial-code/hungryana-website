@@ -1,5 +1,5 @@
 const CACHE = 'hungryana-v1';
-const ASSETS = ['/', '/menu', '/manifest.json', '/logo.svg'];
+const ASSETS = ['/', '/menu', '/manifest.json', '/logo.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS)));

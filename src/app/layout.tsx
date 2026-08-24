@@ -26,7 +26,7 @@ const hind = Hind_Siliguri({
   display: 'swap',
 });
 
-const OG_IMAGE = `${SITE_URL}/logo.svg`;
+const OG_IMAGE = `${SITE_URL}/logo.png`;
 
 export const viewport: Viewport = {
   themeColor: '#e53935',
@@ -78,8 +78,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: [{ url: '/logo.svg', type: 'image/svg+xml' }],
-    apple: [{ url: '/logo.svg' }],
+    icon: [{ url: '/logo.png', type: 'image/png' }],
+    apple: [{ url: '/logo.png' }],
   },
 };
 

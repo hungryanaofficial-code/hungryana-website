@@ -17,6 +17,7 @@ export interface MenuSection {
   subsections: MenuSubsection[];
 }
 
+/** Menu synced from Hungryana Excel / print menu reference */
 export const MENU_SECTIONS: MenuSection[] = [
   {
     id: 'biryani',
@@ -26,28 +27,9 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'The Biryani Station',
         items: [
-          {
-            name: 'Chicken Biryani',
-            price: '₹130',
-            description: '1pc Chicken, 1pc Aloo, 1pc Egg',
-            featured: true,
-          },
-          {
-            name: 'Mutton Biryani',
-            price: '₹230',
-            description: '1pc Mutton, 1pc Aloo, 1pc Egg — subject to availability',
-          },
-        ],
-      },
-      {
-        title: "Chef's Special",
-        items: [
-          {
-            name: 'Hungryana Special Chicken Sizzler',
-            price: '₹200',
-            description: 'Grilled chicken, sautéed veggies, and fries on a smoking plate',
-            featured: true,
-          },
+          { name: 'Chicken Biryani', price: '₹120', featured: true },
+          { name: 'Mutton Biryani', price: '₹220', description: 'Subject to availability' },
+          { name: 'Egg Biryani', price: '₹100' },
         ],
       },
     ],
@@ -60,18 +42,18 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Hand-Tossed Pizzas',
         items: [
-          { name: 'Margherita (Classic Cheese)', price: '₹100' },
-          { name: 'Farmhouse (Fresh Veggies & Paneer)', price: '₹120' },
-          { name: 'Peri-Peri Pizza (Spicy Kick)', price: 'Veg ₹130 / Chk ₹150' },
-          { name: 'Chicken Feast (Loaded with Chicken)', price: '₹180' },
-          { name: 'Cheese Overloaded (Chicken + Extra Mozzarella)', price: '₹200', featured: true },
+          { name: 'Margherita (Classic Cheese)', price: '₹80' },
+          { name: 'Farmhouse (Veg)', price: '₹90' },
+          { name: 'Chicken Pizza', price: '₹100', featured: true },
+          { name: 'Chicken Pizza — Extra Cheese', price: '₹110' },
+          { name: 'Paneer Pizza', price: '₹90' },
         ],
       },
       {
         title: 'Italian Pasta',
         items: [
-          { name: 'Veg Pasta (Red / White Sauce)', price: '₹80' },
-          { name: 'Chicken Pasta (Red / White Sauce)', price: '₹100' },
+          { name: 'Paneer Pasta', price: '₹70' },
+          { name: 'Chicken Pasta', price: '₹80' },
         ],
       },
     ],
@@ -84,10 +66,14 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Indo-Chinese Appetizers',
         items: [
-          { name: 'Chilli Chicken (Dry / Gravy)', price: '₹130' },
+          { name: 'Kurkure Fried Chicken (4 pcs)', price: '₹100' },
+          { name: 'Chilli Chicken (8 pcs, Dry / Gravy)', price: '₹150', featured: true },
           { name: 'Chilli Paneer (Dry / Gravy)', price: '₹120' },
-          { name: 'Hot Garlic Chicken', price: '₹150' },
-          { name: 'Honey Chicken (Crispy & Glazed)', price: '₹150' },
+          { name: 'Hot Garlic Chicken (8 pcs)', price: '₹150' },
+          { name: 'Honey Chicken (Dry)', price: '₹160' },
+          { name: 'Chicken Lollipop (4 pcs)', price: '₹80' },
+          { name: 'Kurkure Baby Corn', price: '₹100' },
+          { name: 'Baby Corn Taka Tin', price: '₹110' },
         ],
       },
     ],
@@ -100,17 +86,18 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Steamed Momos (6 pcs)',
         items: [
-          { name: 'Veg Steamed Momo', price: '₹60', description: 'Classic vegetable filling' },
-          { name: 'Paneer Steamed Momo', price: '₹70' },
-          { name: 'Chicken Steamed Momo', price: '₹80', featured: true },
+          { name: 'Veg Steamed Momo', price: '₹50' },
+          { name: 'Paneer Steamed Momo', price: '₹55' },
+          { name: 'Chicken Steamed Momo', price: '₹60', featured: true },
         ],
       },
       {
         title: 'Fried & Special Momos (6 pcs)',
         items: [
-          { name: 'Veg Fried Momo', price: '₹70' },
-          { name: 'Chicken Fried Momo', price: '₹90' },
-          { name: 'Schezwan Momo', price: 'Veg ₹80 | Chicken ₹100' },
+          { name: 'Veg Fried Momo', price: '₹55' },
+          { name: 'Paneer Fried Momo', price: '₹60' },
+          { name: 'Chicken Fried Momo', price: '₹65' },
+          { name: 'Schezwan Momo', price: '₹65' },
         ],
       },
     ],
@@ -123,15 +110,19 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Chicken Specialties',
         items: [
-          { name: "Chicken Bharta (Chef's Choice)", price: '₹200' },
-          { name: 'Chicken Butter Masala', price: '₹200' },
-          { name: 'Kadai Chicken (4 pcs)', price: '₹200' },
-          { name: 'Tariwala Chicken (4 pcs - Home style)', price: '₹210' },
-          {
-            name: 'Chicken Dakbanglow (Heritage recipe with Egg)',
-            price: '₹220',
-          },
-          { name: 'Chicken Kosha (4 pcs - Spicy semi-dry)', price: '₹180' },
+          { name: 'Chicken Bharta', price: '₹170' },
+          { name: 'Chicken Butter Masala', price: '₹160' },
+          { name: 'Kadai Chicken', price: '₹160' },
+          { name: 'Chicken Kosha', price: '₹160' },
+          { name: 'Shahi Chicken (Sweet)', price: '₹160' },
+        ],
+      },
+      {
+        title: 'Paneer Specialties',
+        items: [
+          { name: 'Kadai Paneer', price: '₹120' },
+          { name: 'Paneer Do Pyaza', price: '₹130' },
+          { name: 'Paneer Butter Masala', price: '₹130' },
         ],
       },
     ],
@@ -144,36 +135,24 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Kebabs & Tikka',
         items: [
-          { name: 'Paneer Tikka (8 pcs)', price: '₹180', featured: true },
-          { name: 'Chicken Tikka (8 pcs)', price: '₹200', featured: true },
-          { name: 'Malai Chicken Tikka (8 pcs)', price: '₹220' },
-          { name: 'Hariyali Chicken Tikka (8 pcs)', price: '₹220' },
-          { name: 'Chicken Seekh Kebab (2 pcs)', price: '₹180' },
-          { name: 'Tandoori Chicken (Half)', price: '₹180', description: 'Marinated & clay-oven roasted' },
-          { name: 'Tandoori Chicken (Full)', price: '₹320' },
+          { name: 'Paneer Tikka (6 pcs)', price: '₹130', featured: true },
+          { name: 'Chicken Tikka (6 pcs)', price: '₹160', featured: true },
+          { name: 'Malai Chicken Tikka', price: '₹180' },
+          { name: 'Hariyali Chicken Tikka', price: '₹170' },
+          { name: 'Tandoori Chicken — Half', price: '₹200' },
+          { name: 'Tandoori Chicken — Full', price: '₹380' },
         ],
       },
       {
-        title: 'Naan & Kulcha',
+        title: 'Naan & Roti',
         items: [
           { name: 'Plain Naan', price: '₹30' },
-          { name: 'Butter Naan', price: '₹40' },
-          { name: 'Garlic Naan', price: '₹50' },
-          { name: 'Cheese Naan', price: '₹70' },
-          { name: 'Garlic Cheese Naan', price: '₹80' },
-          { name: 'Plain Kulcha', price: '₹35' },
-          { name: 'Butter Kulcha', price: '₹45' },
-          { name: 'Aloo Kulcha', price: '₹55' },
-          { name: 'Paneer Kulcha', price: '₹65' },
-          { name: 'Mix Kulcha', price: '₹70', description: 'Aloo & paneer stuffing' },
-        ],
-      },
-      {
-        title: 'Tandoori Roti',
-        items: [
-          { name: 'Tandoori Roti', price: '₹15' },
-          { name: 'Butter Roti', price: '₹20' },
-          { name: 'Roomali Roti', price: '₹25' },
+          { name: 'Butter Naan', price: '₹35' },
+          { name: 'Garlic Naan', price: '₹40' },
+          { name: 'Cheese Naan', price: '₹40' },
+          { name: 'Garlic Cheese Naan', price: '₹40' },
+          { name: 'Tandoori Roti', price: '₹20' },
+          { name: 'Butter Tandoori Roti', price: '₹25' },
         ],
       },
     ],
@@ -184,18 +163,30 @@ export const MENU_SECTIONS: MenuSection[] = [
     emoji: '🍜',
     subsections: [
       {
-        title: 'Fried Rice & Noodles',
+        title: 'Fried Rice',
         items: [
-          { name: 'Fried Rice', price: 'Egg ₹80 | Chicken ₹90 | Mixed ₹110' },
-          { name: 'Noodles', price: 'Veg ₹60 | Egg ₹70 | Chicken ₹90 | Mixed ₹110' },
+          { name: 'Veg Fried Rice', price: '₹50' },
+          { name: 'Egg Fried Rice', price: '₹60' },
+          { name: 'Chicken Fried Rice', price: '₹70' },
+          { name: 'Mix Fried Rice', price: '₹80' },
+        ],
+      },
+      {
+        title: 'Noodles',
+        items: [
+          { name: 'Veg Hakka Noodles', price: '₹60' },
+          { name: 'Egg Noodles', price: '₹70' },
+          { name: 'Chicken Noodles', price: '₹80' },
+          { name: 'Mix Noodles', price: '₹90' },
         ],
       },
       {
         title: 'Street-Style Rolls',
         items: [
-          { name: 'Egg Roll', price: '₹40' },
+          { name: 'Paneer Roll', price: '₹45' },
+          { name: 'Egg Roll', price: '₹45' },
           { name: 'Chicken Roll', price: '₹60' },
-          { name: 'Paneer Roll', price: '₹60' },
+          { name: 'Egg Chicken Roll', price: '₹70' },
         ],
       },
     ],
@@ -206,24 +197,44 @@ export const MENU_SECTIONS: MenuSection[] = [
     emoji: '🫓',
     subsections: [
       {
-        title: 'Indian Breads',
+        title: 'Paratha',
         items: [
           { name: 'Laccha Paratha', price: '₹30' },
-          { name: 'Aloo Paratha', price: '₹40' },
-          { name: 'Paneer Paratha', price: '₹45' },
+          { name: 'Aloo Paratha', price: '₹35' },
         ],
       },
       {
-        title: 'Sides',
-        items: [{ name: 'Dal Fry', price: '₹60' }],
+        title: 'Dal',
+        items: [
+          { name: 'Plain Dal Fry', price: '₹40' },
+          { name: 'Mix Dal Fry', price: '₹50' },
+        ],
       },
       {
         title: 'Rice & Pulao',
         items: [
-          { name: 'Plain Rice', price: '₹50' },
-          { name: 'Jeera Rice', price: '₹60' },
-          { name: 'Peas Pulao', price: '₹70' },
-          { name: 'Sweet Veg Pulao', price: '₹90' },
+          { name: 'Plain Rice', price: '₹40' },
+          { name: 'Jeera Rice', price: '₹40' },
+          { name: 'Peas Pulao', price: '₹45' },
+          { name: 'Sweet Veg Pulao — Kaju Kismiss', price: '₹70' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'south-indian',
+    title: 'South Indian',
+    emoji: '🥘',
+    subsections: [
+      {
+        title: 'South Indian Favourites',
+        items: [
+          { name: 'Plain Dosa', price: '₹50' },
+          { name: 'Masala Dosa', price: '₹65', featured: true },
+          { name: 'Cheese Dosa', price: '₹70' },
+          { name: 'Idli (4 pcs)', price: '₹40' },
+          { name: 'Dahi Vada', price: '₹50' },
+          { name: 'Medu Vada (4 pcs)', price: '₹40' },
         ],
       },
     ],
@@ -234,29 +245,35 @@ export const MENU_SECTIONS: MenuSection[] = [
     emoji: '🥤',
     subsections: [
       {
-        title: 'Refreshing Drinks',
+        title: 'Lassi & Coffee',
         items: [
           {
             name: 'Hungryana Special Lassi',
-            price: '₹70',
-            description: 'With Coconut, Banana, Kaju, and Kismiss',
+            price: '₹80',
+            description: 'With coconut, banana, kaju & kismiss',
             featured: true,
           },
-          { name: 'Salted Lassi (With Roasted Cumin)', price: '₹50' },
-          { name: 'Cold Coffee', price: '₹70' },
+          { name: 'Salted Lassi', price: '₹50' },
+          { name: 'Cold Coffee', price: '₹80' },
+          { name: 'Hot Coffee', price: '₹20' },
         ],
       },
       {
-        title: 'Hot Brews',
+        title: 'Mocktails & Coolers',
         items: [
-          { name: 'Special Milk Tea', price: '₹20' },
-          { name: 'Hot Coffee', price: '₹25' },
+          { name: 'Fresh Lime Soda — Sweet / Mix / Salt', price: '₹40' },
+          { name: 'Virgin Mojito', price: '₹50' },
+          { name: 'Blue Lagoon', price: '₹50' },
+          { name: 'Watermelon Mojito', price: '₹50' },
+          { name: 'Nimbu Shikanji', price: '₹60' },
+          { name: 'Aam Jhatka', price: '₹60' },
         ],
       },
       {
         title: 'Dessert',
         items: [
-          { name: 'Fried Ice Cream', price: '₹100', featured: true },
+          { name: 'Fried Ice Cream', price: '₹60', featured: true },
+          { name: 'Gulab Jamun Ice Cream', price: '₹45' },
         ],
       },
     ],
@@ -269,8 +286,9 @@ export const MENU_SECTIONS: MenuSection[] = [
       {
         title: 'Soups',
         items: [
-          { name: 'Classic Tomato Soup', price: '₹60' },
-          { name: 'Sweet Corn Soup (Veg/Non-Veg)', price: '₹100' },
+          { name: 'Classic Tomato Soup', price: '₹30' },
+          { name: 'Sweet Corn Soup — Veg', price: '₹30' },
+          { name: 'Sweet Corn Soup — Non-Veg', price: '₹40' },
         ],
       },
     ],

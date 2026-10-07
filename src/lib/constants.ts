@@ -67,5 +67,6 @@ export const CUISINE_CATEGORIES = [
   'Chinese & Wok',
   'Momos & Starters',
   'Tandoor',
+  'South Indian',
   'Beverages & Dessert',
 ] as const;

@@ -3,6 +3,13 @@ const u = (id: string, w = 800) =>
   `https://images.unsplash.com/${id}?w=${w}&q=80&auto=format&fit=crop`;
 
 export const IMAGES = {
+  // Durga Puja / festive (local + Unsplash)
+  durgaBanner: '/hungryana-sharad-subhechcha-banner.jpg',
+  durgaStory: '/hungryana-sharad-subhechcha-story.png',
+  durgaPandal: u('photo-1605649487212-47bdab064df7', 1600),
+  durgaLights: u('photo-1533174072545-7a4b6d5c4af9', 1600),
+  durgaDhaki: u('photo-1578662996442-48f60103fc96', 1600),
+
   // Hero
   heroPizza: u('photo-1513104890138-7c749659a591', 1920),
   heroKebab: u('photo-1742808838159-1848c1a36209', 1920),

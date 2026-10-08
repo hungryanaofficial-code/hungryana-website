@@ -17,6 +17,44 @@ export const OPENING = {
   location: `${SITE.locality}, ${SITE.district}`,
 } as const;
 
+export const DURGA_PUJA = {
+  eyebrow: 'শারদীয় শুভেচ্ছা',
+  headline: 'Subho Sharodiya',
+  headlineBn: 'মা দুর্গার আশীর্বাদে',
+  subline:
+    'Hungryana পরিবারের পক্ষ থেকে কির্ণাহার, বীরভূম ও সমগ্র বাংলার প্রতি আন্তরিক শারদীয় শুভেচ্ছা।',
+  visitLine: 'Puja season? Visit Hungryana — celebrate with biryani, momos, tandoor & family platters.',
+  ctaPrimary: 'Visit Hungryana',
+  ctaMenu: 'Puja Menu',
+} as const;
+
+export const DURGA_WISHES = [
+  {
+    id: 'shubhechha',
+    label: 'শুভেচ্ছা',
+    bn: 'শারদীয় শুভেচ্ছা ও অন্তরের শুভেষা।',
+    en: 'Warm Durga Puja greetings from all of us at Hungryana.',
+  },
+  {
+    id: 'ashirbad',
+    label: 'আশীর্বাদ',
+    bn: 'মা দুর্গার আশীর্বাদে আপনার জীবন সুখ, শান্তি ও সমৃদ্ধিতে ভরে উঠুক।',
+    en: 'May Maa Durga bless you with joy, peace, and prosperity.',
+  },
+  {
+    id: 'bhog',
+    label: 'পুজো ভোগ',
+    bn: 'পুজোর দিনে পরিবারের সঙ্গে Hungryana-তে বসে খাওয়ার স্বাদ উপভোগ করুন।',
+    en: 'Share festive meals with family — dine in or order from Hungryana.',
+  },
+  {
+    id: 'kirnahar',
+    label: 'কির্ণাহার',
+    bn: 'কির্ণাহার, বীরভূম — এক ছাদে বহু রস, পুজোর রাতে আপনার পাশে Hungryana।',
+    en: 'Your neighbourhood multi-cuisine kitchen in Kirnahar, Birbhum.',
+  },
+] as const;
+
 /** Use for `href` on call-to-order buttons and phone links */
 export const PHONE_TEL = `tel:${SITE.phone.replace(/\s/g, '')}`;
 

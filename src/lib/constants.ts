@@ -23,7 +23,7 @@ export const DURGA_PUJA = {
   headlineBn: 'মা দুর্গার আশীর্বাদে',
   subline:
     'Hungryana পরিবারের পক্ষ থেকে কির্ণাহার, বীরভূম ও সমগ্র বাংলার প্রতি আন্তরিক শারদীয় শুভেচ্ছা।',
-  visitLine: 'Puja season? Visit Hungryana — celebrate with biryani, momos, tandoor & family platters.',
+  visitLine: 'Puja season? Visit Hungryana — celebrate with biryani, basanti pulao, momos & family platters.',
   ctaPrimary: 'Visit Hungryana',
   ctaMenu: 'Puja Menu',
 } as const;
@@ -67,7 +67,7 @@ export const ABOUT_STORY = {
   },
   cook: {
     title: 'The Cook',
-    text: 'Hands-on experience across Indian, Chinese, Italian, and tandoor cooking — turning ideas into dishes that arrive hot, fresh, and full of flavour.',
+    text: 'Hands-on experience across Indian, Bengali, Chinese, and Italian cooking — turning ideas into dishes that arrive hot, fresh, and full of flavour.',
   },
   closing: `Together they built Hungryana in ${SITE.locality} — a neighbourhood kitchen where multiple cuisines live under one roof.`,
 } as const;
@@ -104,7 +104,6 @@ export const CUISINE_CATEGORIES = [
   'Indian Main Course',
   'Chinese & Wok',
   'Momos & Starters',
-  'Tandoor',
   'South Indian',
   'Beverages & Dessert',
 ] as const;

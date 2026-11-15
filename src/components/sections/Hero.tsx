@@ -35,7 +35,7 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-cream/80 md:text-lg">
-          Multi-cuisine restaurant in {SITE.locality}. Biryani, Pizza, Momos, Tandoor &amp; more —
+          Multi-cuisine restaurant in {SITE.locality}. Biryani, Basanti Pulao, Pizza, Momos &amp; more —
           bold flavours, young energy, premium taste.
         </p>
 

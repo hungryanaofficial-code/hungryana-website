@@ -294,7 +294,7 @@ export function DurgaPujaLanding() {
             <UtensilsCrossed className="mb-3 h-10 w-10 text-gold" aria-hidden="true" />
             <h2 className="font-display text-2xl text-warm-white md:text-4xl">{DURGA_PUJA.ctaPrimary}</h2>
             <p className="mt-2 max-w-lg text-cream/75">
-              Puja evenings made easy — dine in at Kirnahar or call for takeaway. Biryani, momos, tandoor &amp;
+              Puja evenings made easy — dine in at Kirnahar or call for takeaway. Biryani, basanti pulao, momos &amp;
               festive platters waiting for you.
             </p>
             <p className="mt-3 inline-flex items-center gap-1.5 text-sm text-gold">

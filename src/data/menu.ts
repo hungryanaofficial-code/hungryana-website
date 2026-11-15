@@ -97,6 +97,7 @@ export const MENU_SECTIONS: MenuSection[] = [
         items: [
           { name: 'Lachha Paratha', price: '₹35' },
           { name: 'Peas Pulao', price: '₹90' },
+          { name: 'Basanti Pulao', price: '', featured: true },
           { name: 'Sweet Kaju Kismiss Pulao', price: '₹120' },
           { name: 'Jeera Rice', price: '₹70' },
         ],
@@ -140,32 +141,6 @@ export const MENU_SECTIONS: MenuSection[] = [
           { name: 'Chilli Chicken (Gravy / Dry) (8 pcs)', price: '₹180', featured: true },
           { name: 'Hot Garlic Chicken / Paneer', price: '₹190' },
           { name: 'Honey Chicken / Paneer', price: '₹200' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'tandoor',
-    title: 'Tandoor Corner',
-    emoji: '🔥',
-    subsections: [
-      {
-        title: 'Naan & Roti',
-        items: [
-          { name: 'Plain Naan', price: '₹40' },
-          { name: 'Butter Naan', price: '₹50' },
-          { name: 'Garlic Naan', price: '₹60' },
-          { name: 'Tandoori Roti', price: '₹35' },
-          { name: 'Butter Tandoori Roti', price: '₹40' },
-        ],
-      },
-      {
-        title: 'Kebabs & Tandoori',
-        items: [
-          { name: 'Paneer Tikka (6 pcs)', price: '₹200', featured: true },
-          { name: 'Chicken Tikka (6 pcs)', price: '₹220', featured: true },
-          { name: 'Tandoori Chicken (Half)', price: '₹350' },
-          { name: 'Tandoori Chicken (Full)', price: '₹550' },
         ],
       },
     ],

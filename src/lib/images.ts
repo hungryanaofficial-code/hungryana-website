@@ -26,7 +26,6 @@ export const IMAGES = {
   friedRice: u('photo-1512058564366-18510be2db19'), // Indo-Chinese fried noodles/rice style
   lassi: u('photo-1626074353765-769a6840ada2'), // thick mango/yogurt drink
   pasta: u('photo-1621996346565-e3dbc646d9a9'),
-  tandoorKebab: u('photo-1603360946369-610cb4a1552c'), // seekh kebab skewers
   momo: u('photo-1496116218417-3981a247bcd4'), // dumplings
   mocktail: u('photo-1544145945-f90425340c7e'),
   dessert: u('photo-1551024506-0bccd828d307'), // ice cream dessert
@@ -45,6 +44,14 @@ export const AMBIENCE = [
   { src: IMAGES.ambienceMirrorWall, alt: 'Backlit mirror and greenery wall beside colourful shutters' },
   { src: IMAGES.ambienceTealWall, alt: 'Teal feature wall with gold deer artwork and yellow seating' },
   { src: IMAGES.ambienceCeiling, alt: 'Hanging greenery and festive lanterns on the ceiling' },
+] as const;
+
+export const REELS = [
+  { src: '/reels/reel-1.mp4', poster: '/reels/reel-1.jpg', title: 'A Walk Through Hungryana' },
+  { src: '/reels/reel-2.mp4', poster: '/reels/reel-2.jpg', title: 'Masala Dosa off the Tawa' },
+  { src: '/reels/reel-3.mp4', poster: '/reels/reel-3.jpg', title: 'Wok-Tossed Chinese' },
+  { src: '/reels/reel-4.mp4', poster: '/reels/reel-4.jpg', title: 'Pizza Fresh from the Oven' },
+  { src: '/reels/reel-5.mp4', poster: '/reels/reel-5.jpg', title: 'Noodles in the Making' },
 ] as const;
 
 export const SPECIALITIES = [
@@ -117,10 +124,10 @@ export const MENU_CATEGORIES = [
     href: '/menu',
   },
   {
-    emoji: '🔥',
-    title: 'Tandoor',
-    description: 'Seekh kebab, tikka, and tandoori chicken.',
-    image: IMAGES.tandoorKebab,
+    emoji: '🍚',
+    title: 'Rice & Pulao',
+    description: 'Basanti pulao, peas pulao, kaju kismiss pulao, and jeera rice.',
+    image: IMAGES.friedRice,
     href: '/menu',
   },
   {
@@ -144,7 +151,6 @@ export const GALLERY_ITEMS = [
   { src: IMAGES.cheesePizza, alt: 'Cheese loaded pizza slice', category: 'Pizza' },
   { src: IMAGES.butterChicken, alt: 'Chicken butter masala curry', category: 'Indian' },
   { src: IMAGES.hakkaNoodles, alt: 'Chicken hakka noodles', category: 'Chinese' },
-  { src: IMAGES.tandoorKebab, alt: 'Tandoor seekh kebab skewers', category: 'Tandoor' },
   { src: IMAGES.sizzler, alt: 'Grilled chicken sizzler with vegetables', category: 'Special' },
   { src: IMAGES.momo, alt: 'Steamed momos', category: 'Momos' },
   { src: IMAGES.lassi, alt: 'Hungryana special lassi', category: 'Beverages' },

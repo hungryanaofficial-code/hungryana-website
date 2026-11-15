@@ -8,6 +8,7 @@ const Specialities = dynamic(() =>
 const MenuPreview = dynamic(() =>
   import('@/components/sections/MenuPreview').then((m) => m.MenuPreview)
 );
+const Reels = dynamic(() => import('@/components/sections/Reels').then((m) => m.Reels));
 const Contact = dynamic(() => import('@/components/sections/Contact').then((m) => m.Contact));
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <About />
       <Specialities />
       <MenuPreview />
+      <Reels />
       <Contact />
     </>
   );

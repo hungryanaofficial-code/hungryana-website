@@ -5,10 +5,14 @@ export const SITE = {
   taglineAlt: 'One Destination, Endless Flavours',
   email: 'hungryana.official@gmail.com',
   phone: '+91 83898 77242',
-  address: 'Kirnahar, Birbhum, West Bengal, India',
+  address: 'Paschimpatty, Kirnahar, Birbhum, West Bengal 731302',
   locality: 'Kirnahar',
   district: 'Birbhum',
-  mapsQuery: 'Kirnahar,Birbhum,West+Bengal',
+  mapsQuery: '23.7665952,87.8735082',
+  /** Google Business listing (reviews, directions) */
+  mapsUrl: 'https://maps.google.com/?cid=1490091192681277951',
+  googleRating: '4.7',
+  googleReviewCount: 15,
 } as const;
 
 export const OPENING = {

@@ -41,9 +41,33 @@ export const IMAGES = {
 } as const;
 
 export const AMBIENCE = [
+  { src: '/kitchen/teal-dining.jpg', alt: 'Teal dining nook with yellow seating and gold wall art' },
   { src: IMAGES.ambienceMirrorWall, alt: 'Backlit mirror and greenery wall beside colourful shutters' },
   { src: IMAGES.ambienceTealWall, alt: 'Teal feature wall with gold deer artwork and yellow seating' },
   { src: IMAGES.ambienceCeiling, alt: 'Hanging greenery and festive lanterns on the ceiling' },
+] as const;
+
+/** Real dishes, stills taken from Hungryana's own reels and Google listing */
+export const KITCHEN = {
+  wokFlame: '/kitchen/wok-flame.jpg',
+  masalaDosa: '/kitchen/masala-dosa.jpg',
+  chilliChicken: '/kitchen/chilli-chicken.jpg',
+  chickenPizza: '/kitchen/chicken-pizza.jpg',
+  hakkaNoodles: '/kitchen/hakka-noodles.jpg',
+  kathiRoll: '/kitchen/kathi-roll.jpg',
+  pizzaOven: '/kitchen/pizza-oven.jpg',
+  pizzaServed: '/kitchen/pizza-served.jpg',
+  storefrontDay: '/kitchen/storefront-day.jpg',
+  tealDining: '/kitchen/teal-dining.jpg',
+} as const;
+
+export const SIGNATURE_DISHES = [
+  { src: KITCHEN.wokFlame, title: 'Fire-Wok Chinese', note: 'Chilli chicken, hot garlic & more', span: 'tall' },
+  { src: KITCHEN.masalaDosa, title: 'Masala Dosa', note: 'Crisp, golden, with sambar & chutney', span: 'normal' },
+  { src: KITCHEN.chilliChicken, title: 'Chilli Chicken', note: 'Glossy, spicy, wok-tossed', span: 'normal' },
+  { src: KITCHEN.chickenPizza, title: 'Chicken Pizza', note: 'Loaded and baked to order', span: 'normal' },
+  { src: KITCHEN.hakkaNoodles, title: 'Hakka Noodles', note: 'Veg, egg, chicken or mixed', span: 'normal' },
+  { src: KITCHEN.kathiRoll, title: 'Rolls & Wraps', note: 'Stuffed, saucy, made on the tawa', span: 'normal' },
 ] as const;
 
 export const REELS = [

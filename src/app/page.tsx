@@ -8,6 +8,9 @@ const Specialities = dynamic(() =>
 const MenuPreview = dynamic(() =>
   import('@/components/sections/MenuPreview').then((m) => m.MenuPreview)
 );
+const GoogleReviews = dynamic(() =>
+  import('@/components/sections/GoogleReviews').then((m) => m.GoogleReviews)
+);
 const Reels = dynamic(() => import('@/components/sections/Reels').then((m) => m.Reels));
 const Contact = dynamic(() => import('@/components/sections/Contact').then((m) => m.Contact));
 
@@ -15,10 +18,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <About />
       <Specialities />
+      <About />
       <MenuPreview />
       <Reels />
+      <GoogleReviews />
       <Contact />
     </>
   );

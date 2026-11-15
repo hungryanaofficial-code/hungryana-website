@@ -1,18 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-import { Flame, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { OrderNowButton } from '@/components/ui/OrderNowButton';
 import { LogoImage } from '@/components/ui/LogoImage';
-import { OPENING, QUICK_LINKS, SITE } from '@/lib/constants';
+import { QUICK_LINKS, SITE } from '@/lib/constants';
 import { IMAGES } from '@/lib/images';
 export function Hero() {
   return (
     <section
       id="home"
       className="relative flex min-h-[88vh] flex-col justify-end overflow-hidden bg-black pb-10 pt-24 md:min-h-[92vh] md:pb-14"
-      aria-label="Hungryana — opening soon"
+      aria-label="Hungryana — home"
     >
       {/* Background — pizza & kebabs, no rice */}
       <div className="absolute inset-0 flex" aria-hidden="true">
@@ -29,14 +29,6 @@ export function Hero() {
       <div className="spicy-glow absolute inset-0" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto w-full max-w-5xl px-5 text-center lg:max-w-6xl">
-        {/* Opening badge — no promo banner image */}
-        <div className="opening-badge mx-auto mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold tracking-wide">
-          <Flame className="h-4 w-4 text-orange" aria-hidden="true" />
-          <span>
-            {OPENING.label} · {OPENING.date}
-          </span>
-        </div>
-
         <LogoImage size="hero" priority className="mx-auto mb-4" />
 
         <p className="font-body text-lg text-gold/90 md:text-xl" lang="bn">
@@ -54,7 +46,7 @@ export function Hero() {
 
         <p className="mt-3 inline-flex items-center justify-center gap-1.5 text-sm text-cream/60">
           <MapPin className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
-          {OPENING.location}
+          {SITE.locality}, {SITE.district}
         </p>
 
         <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">

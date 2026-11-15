@@ -17,279 +17,198 @@ export interface MenuSection {
   subsections: MenuSubsection[];
 }
 
-/** Menu synced from Hungryana Excel / print menu reference */
+/** Official Hungryana menu (3-page print menu) */
 export const MENU_SECTIONS: MenuSection[] = [
   {
-    id: 'biryani',
-    title: 'Biryani',
-    emoji: '🍛',
-    subsections: [
-      {
-        title: 'The Biryani Station',
-        items: [
-          { name: 'Chicken Biryani', price: '₹120', featured: true },
-          { name: 'Mutton Biryani', price: '₹220', description: 'Subject to availability' },
-          { name: 'Egg Biryani', price: '₹100' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'pizza-pasta',
-    title: 'Pizza & Pasta',
-    emoji: '🍕',
-    subsections: [
-      {
-        title: 'Hand-Tossed Pizzas',
-        items: [
-          { name: 'Margherita (Classic Cheese)', price: '₹80' },
-          { name: 'Farmhouse (Veg)', price: '₹90' },
-          { name: 'Chicken Pizza', price: '₹100', featured: true },
-          { name: 'Chicken Pizza — Extra Cheese', price: '₹110' },
-          { name: 'Paneer Pizza', price: '₹90' },
-        ],
-      },
-      {
-        title: 'Italian Pasta',
-        items: [
-          { name: 'Paneer Pasta', price: '₹70' },
-          { name: 'Chicken Pasta', price: '₹80' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'starters',
-    title: 'Starters',
-    emoji: '🌶️',
-    subsections: [
-      {
-        title: 'Indo-Chinese Appetizers',
-        items: [
-          { name: 'Kurkure Fried Chicken (4 pcs)', price: '₹100' },
-          { name: 'Chilli Chicken (8 pcs, Dry / Gravy)', price: '₹150', featured: true },
-          { name: 'Chilli Paneer (Dry / Gravy)', price: '₹120' },
-          { name: 'Hot Garlic Chicken (8 pcs)', price: '₹150' },
-          { name: 'Honey Chicken (Dry)', price: '₹160' },
-          { name: 'Chicken Lollipop (4 pcs)', price: '₹80' },
-          { name: 'Kurkure Baby Corn', price: '₹100' },
-          { name: 'Baby Corn Taka Tin', price: '₹110' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'momos',
-    title: 'Momos',
+    id: 'starters-soups',
+    title: 'Starters & Soups',
     emoji: '🥟',
     subsections: [
       {
-        title: 'Steamed Momos (6 pcs)',
+        title: 'Starters',
         items: [
-          { name: 'Veg Steamed Momo', price: '₹50' },
-          { name: 'Paneer Steamed Momo', price: '₹55' },
-          { name: 'Chicken Steamed Momo', price: '₹60', featured: true },
+          { name: 'Pakora (6 pcs)', price: '₹110' },
+          { name: 'Lollipop (4 pcs)', price: '₹110' },
+          { name: 'Fish Finger (4 pcs)', price: '₹120' },
         ],
       },
       {
-        title: 'Fried & Special Momos (6 pcs)',
+        title: 'Momos & Rolls (6 pcs / Regular)',
         items: [
-          { name: 'Veg Fried Momo', price: '₹55' },
-          { name: 'Paneer Fried Momo', price: '₹60' },
-          { name: 'Chicken Fried Momo', price: '₹65' },
-          { name: 'Schezwan Momo', price: '₹65' },
+          { name: 'Veg Steam Momo', price: '₹50' },
+          { name: 'Chicken Steam Momo', price: '₹70', featured: true },
+          { name: 'Veg Fried Momo', price: '₹60' },
+          { name: 'Chicken Fried Momo', price: '₹80' },
+          { name: 'Schezwan Momo (Chicken)', price: '₹90' },
+          { name: 'Schezwan Momo (Veg)', price: '₹70' },
+          { name: 'Egg Roll', price: '₹50' },
+          { name: 'Paneer Roll', price: '₹60' },
+          { name: 'Chicken Roll', price: '₹70' },
+          { name: 'Egg Chicken Roll', price: '₹80' },
+        ],
+      },
+      {
+        title: 'Pasta & Soup',
+        items: [
+          { name: 'Veg White Sauce Pasta', price: '₹100' },
+          { name: 'Non-Veg White Sauce Pasta', price: '₹120' },
+          { name: 'Classic Tomato Soup', price: '₹40' },
+          { name: 'Sweet Corn Soup', price: '₹50' },
+          { name: 'Sweet Corn Non-Veg Soup', price: '₹60' },
         ],
       },
     ],
   },
   {
-    id: 'indian-main',
-    title: 'Indian Main Course',
-    emoji: '🍲',
+    id: 'south-indian-pizza',
+    title: 'South Indian & Pizza',
+    emoji: '🍕',
     subsections: [
       {
-        title: 'Chicken Specialties',
+        title: 'South Indian',
         items: [
-          { name: 'Chicken Bharta', price: '₹170' },
-          { name: 'Chicken Butter Masala', price: '₹160' },
-          { name: 'Kadai Chicken', price: '₹160' },
-          { name: 'Chicken Kosha', price: '₹160' },
-          { name: 'Shahi Chicken (Sweet)', price: '₹160' },
+          { name: 'Plain Dosa', price: '₹50' },
+          { name: 'Masala Dosa', price: '₹70', featured: true },
+          { name: 'Cheese Masala Dosa', price: '₹80' },
+          { name: 'Idli (4 pcs)', price: '₹50' },
+          { name: 'Dahi Vada', price: '₹80' },
+          { name: 'Medu Vada (4 pcs)', price: '₹50' },
         ],
       },
       {
-        title: 'Paneer Specialties',
+        title: 'Pizza',
         items: [
-          { name: 'Kadai Paneer', price: '₹120' },
-          { name: 'Paneer Do Pyaza', price: '₹130' },
-          { name: 'Paneer Butter Masala', price: '₹130' },
+          { name: 'Margherita Pizza', price: '₹120' },
+          { name: 'Farmhouse Veg Pizza', price: '₹140' },
+          { name: 'Paneer Pizza', price: '₹150' },
+          { name: 'Chicken Pizza', price: '₹160', featured: true },
+          { name: 'Extra Cheese', price: '₹20' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'paratha-rice-mains',
+    title: 'Paratha, Rice & Indian Mains',
+    emoji: '🍛',
+    subsections: [
+      {
+        title: 'Paratha & Rice',
+        items: [
+          { name: 'Lachha Paratha', price: '₹35' },
+          { name: 'Peas Pulao', price: '₹90' },
+          { name: 'Sweet Kaju Kismiss Pulao', price: '₹120' },
+          { name: 'Jeera Rice', price: '₹70' },
+        ],
+      },
+      {
+        title: 'Indian Mains & Biryani',
+        items: [
+          { name: 'Chicken Kosha (4 pcs)', price: '₹200' },
+          { name: 'Chicken Bharta', price: '₹240' },
+          { name: 'Egg Biriyani', price: '₹120' },
+          { name: 'Chicken Biriyani', price: '₹160', featured: true },
+          { name: 'Aloo Biriyani', price: '₹100' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'chinese',
+    title: 'Chinese Specialties',
+    emoji: '🍜',
+    subsections: [
+      {
+        title: 'Noodles & Fried Rice',
+        items: [
+          {
+            name: 'Hakka Noodles',
+            price: '₹90 – ₹140',
+            description: 'Veg / Egg / Chicken / Mixed',
+          },
+          {
+            name: 'Fried Rice',
+            price: '₹70 – ₹160',
+            description: 'Veg / Paneer / Egg / Chicken / Mix',
+          },
+        ],
+      },
+      {
+        title: 'Indo-Chinese',
+        items: [
+          { name: 'Chilli Paneer (Gravy / Dry) (8 pcs)', price: '₹160' },
+          { name: 'Chilli Chicken (Gravy / Dry) (8 pcs)', price: '₹180', featured: true },
+          { name: 'Hot Garlic Chicken / Paneer', price: '₹190' },
+          { name: 'Honey Chicken / Paneer', price: '₹200' },
         ],
       },
     ],
   },
   {
     id: 'tandoor',
-    title: 'Tandoor',
+    title: 'Tandoor Corner',
     emoji: '🔥',
     subsections: [
       {
-        title: 'Kebabs & Tikka',
-        items: [
-          { name: 'Paneer Tikka (6 pcs)', price: '₹130', featured: true },
-          { name: 'Chicken Tikka (6 pcs)', price: '₹160', featured: true },
-          { name: 'Malai Chicken Tikka', price: '₹180' },
-          { name: 'Hariyali Chicken Tikka', price: '₹170' },
-          { name: 'Tandoori Chicken — Half', price: '₹200' },
-          { name: 'Tandoori Chicken — Full', price: '₹380' },
-        ],
-      },
-      {
         title: 'Naan & Roti',
         items: [
-          { name: 'Plain Naan', price: '₹30' },
-          { name: 'Butter Naan', price: '₹35' },
-          { name: 'Garlic Naan', price: '₹40' },
-          { name: 'Cheese Naan', price: '₹40' },
-          { name: 'Garlic Cheese Naan', price: '₹40' },
-          { name: 'Tandoori Roti', price: '₹20' },
-          { name: 'Butter Tandoori Roti', price: '₹25' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'wok-rolls',
-    title: 'Wok & Rolls',
-    emoji: '🍜',
-    subsections: [
-      {
-        title: 'Fried Rice',
-        items: [
-          { name: 'Veg Fried Rice', price: '₹50' },
-          { name: 'Egg Fried Rice', price: '₹60' },
-          { name: 'Chicken Fried Rice', price: '₹70' },
-          { name: 'Mix Fried Rice', price: '₹80' },
+          { name: 'Plain Naan', price: '₹40' },
+          { name: 'Butter Naan', price: '₹50' },
+          { name: 'Garlic Naan', price: '₹60' },
+          { name: 'Tandoori Roti', price: '₹35' },
+          { name: 'Butter Tandoori Roti', price: '₹40' },
         ],
       },
       {
-        title: 'Noodles',
+        title: 'Kebabs & Tandoori',
         items: [
-          { name: 'Veg Hakka Noodles', price: '₹60' },
-          { name: 'Egg Noodles', price: '₹70' },
-          { name: 'Chicken Noodles', price: '₹80' },
-          { name: 'Mix Noodles', price: '₹90' },
-        ],
-      },
-      {
-        title: 'Street-Style Rolls',
-        items: [
-          { name: 'Paneer Roll', price: '₹45' },
-          { name: 'Egg Roll', price: '₹45' },
-          { name: 'Chicken Roll', price: '₹60' },
-          { name: 'Egg Chicken Roll', price: '₹70' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'breads-sides',
-    title: 'Rice, Breads & Dal',
-    emoji: '🫓',
-    subsections: [
-      {
-        title: 'Paratha',
-        items: [
-          { name: 'Laccha Paratha', price: '₹30' },
-          { name: 'Aloo Paratha', price: '₹35' },
-        ],
-      },
-      {
-        title: 'Dal',
-        items: [
-          { name: 'Plain Dal Fry', price: '₹40' },
-          { name: 'Mix Dal Fry', price: '₹50' },
-        ],
-      },
-      {
-        title: 'Rice & Pulao',
-        items: [
-          { name: 'Plain Rice', price: '₹40' },
-          { name: 'Jeera Rice', price: '₹40' },
-          { name: 'Peas Pulao', price: '₹45' },
-          { name: 'Sweet Veg Pulao — Kaju Kismiss', price: '₹70' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'south-indian',
-    title: 'South Indian',
-    emoji: '🥘',
-    subsections: [
-      {
-        title: 'South Indian Favourites',
-        items: [
-          { name: 'Plain Dosa', price: '₹50' },
-          { name: 'Masala Dosa', price: '₹65', featured: true },
-          { name: 'Cheese Dosa', price: '₹70' },
-          { name: 'Idli (4 pcs)', price: '₹40' },
-          { name: 'Dahi Vada', price: '₹50' },
-          { name: 'Medu Vada (4 pcs)', price: '₹40' },
+          { name: 'Paneer Tikka (6 pcs)', price: '₹200', featured: true },
+          { name: 'Chicken Tikka (6 pcs)', price: '₹220', featured: true },
+          { name: 'Tandoori Chicken (Half)', price: '₹350' },
+          { name: 'Tandoori Chicken (Full)', price: '₹550' },
         ],
       },
     ],
   },
   {
     id: 'beverages-dessert',
-    title: 'Beverages & Dessert',
+    title: 'Beverages, Coffee & Desserts',
     emoji: '🥤',
     subsections: [
       {
-        title: 'Lassi & Coffee',
+        title: 'Lassi & Coolers',
         items: [
           {
             name: 'Hungryana Special Lassi',
-            price: '₹80',
-            description: 'With coconut, banana, kaju & kismiss',
+            price: '₹50 – ₹80',
+            description: 'Special / Sweet / Salted / Mixed',
             featured: true,
           },
-          { name: 'Salted Lassi', price: '₹50' },
-          { name: 'Cold Coffee', price: '₹80' },
-          { name: 'Hot Coffee', price: '₹20' },
+          {
+            name: 'Fresh Lime Soda',
+            price: '₹40 – ₹45',
+            description: 'Sweet / Salted / Mixed',
+          },
+          {
+            name: 'Virgin Mojito / Blue Lagoon / Watermelon / Nimbu Shikanji',
+            price: '₹60',
+          },
         ],
       },
       {
-        title: 'Mocktails & Coolers',
+        title: 'Coffee & Ice Cream',
         items: [
-          { name: 'Fresh Lime Soda — Sweet / Mix / Salt', price: '₹40' },
-          { name: 'Virgin Mojito', price: '₹50' },
-          { name: 'Blue Lagoon', price: '₹50' },
-          { name: 'Watermelon Mojito', price: '₹50' },
-          { name: 'Nimbu Shikanji', price: '₹60' },
-          { name: 'Aam Jhatka', price: '₹60' },
+          { name: 'Cold Coffee', price: '₹80' },
+          { name: 'Cold Coffee with Ice Cream', price: '₹100' },
+          {
+            name: 'Jamuni Vanilla / Cookies Cream / Butterscotch',
+            price: '₹80',
+          },
         ],
       },
       {
         title: 'Dessert',
-        items: [
-          { name: 'Fried Ice Cream', price: '₹60', featured: true },
-          { name: 'Gulab Jamun Ice Cream', price: '₹45' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'soups',
-    title: 'Soups',
-    emoji: '🥣',
-    subsections: [
-      {
-        title: 'Soups',
-        items: [
-          { name: 'Classic Tomato Soup', price: '₹30' },
-          { name: 'Sweet Corn Soup — Veg', price: '₹30' },
-          { name: 'Sweet Corn Soup — Non-Veg', price: '₹40' },
-        ],
+        items: [{ name: 'Hot Gulab Jamun (2 pcs)', price: '₹30' }],
       },
     ],
   },

@@ -28,7 +28,7 @@ export function LogoImage({ size = 'md', className, priority = false }: LogoImag
       alt="Hungryana logo"
       width={w}
       height={h}
-      className={clsx(cls, 'object-contain logo-glow', className)}
+      className={clsx(cls, 'block object-contain object-center logo-glow', className)}
       onError={() => setSrc('/hungryana-logo.png')}
       priority={priority}
     />

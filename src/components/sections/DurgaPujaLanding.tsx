@@ -17,21 +17,25 @@ const SLIDES = [
     src: IMAGES.durgaBanner,
     alt: 'Hungryana Sharodiya Shubhechha — Durga Puja greetings from Kirnahar',
     caption: 'শারদীয় শুভেচ্ছা · Hungryana',
+    fit: 'contain' as const,
   },
   {
     src: IMAGES.durgaStory,
     alt: 'Durga Puja wishes from Hungryana family',
     caption: 'From our family to yours',
+    fit: 'contain' as const,
   },
   {
     src: IMAGES.durgaPandal,
     alt: 'Festive pandal lights during Durga Puja',
     caption: 'Celebrate the season of Maa Durga',
+    fit: 'cover' as const,
   },
   {
     src: IMAGES.durgaLights,
     alt: 'Festival lights and celebration',
     caption: 'Light, colour & togetherness',
+    fit: 'cover' as const,
   },
 ] as const;
 
@@ -117,7 +121,9 @@ export function DurgaPujaLanding() {
             <span>{DURGA_PUJA.headline}</span>
           </motion.div>
 
-          <LogoImage size="md" priority className="mb-3" />
+          <div className="mb-3 flex w-full justify-center">
+            <LogoImage size="md" priority className="mx-auto" />
+          </div>
 
           <button
             type="button"
@@ -155,72 +161,83 @@ export function DurgaPujaLanding() {
           <p className="mt-2 max-w-xl text-sm text-cream/65 md:text-base">{DURGA_PUJA.visitLine}</p>
         </div>
 
-        {/* Interactive gallery */}
+        {/* Interactive gallery — fixed frame, brand art contained (not cropped) */}
         <div
-          className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-gold/25 shadow-2xl shadow-red/20"
+          className="relative mx-auto max-w-4xl"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
           onFocus={() => setPaused(true)}
           onBlur={() => setPaused(false)}
         >
-          <div className="relative aspect-[4/5] sm:aspect-[16/10]">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={slide}
-                initial={{ opacity: 0, scale: 1.04 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.45 }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={SLIDES[slide].src}
-                  alt={SLIDES[slide].alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 896px"
-                  priority={slide === 0}
-                  unoptimized={!isRemote(SLIDES[slide].src)}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/40" />
-                <p className="absolute bottom-4 left-4 right-4 text-center text-sm font-medium text-gold md:text-base">
-                  {SLIDES[slide].caption}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+          <div className="media-frame overflow-hidden rounded-2xl border border-gold/25 shadow-2xl shadow-red/20">
+            <div className="relative aspect-[4/5] min-h-[280px] bg-gradient-to-b from-[#1a0a1f] via-black to-black sm:aspect-[5/4] md:aspect-[16/10] md:min-h-[360px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={slide}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0 flex items-center justify-center p-3 sm:p-4 md:p-6"
+                >
+                  <Image
+                    src={SLIDES[slide].src}
+                    alt={SLIDES[slide].alt}
+                    fill
+                    className={clsx(
+                      'object-center',
+                      SLIDES[slide].fit === 'contain'
+                        ? 'object-contain p-1 sm:p-2'
+                        : 'object-cover'
+                    )}
+                    sizes="(max-width: 768px) 100vw, 896px"
+                    priority={slide === 0}
+                    unoptimized={!isRemote(SLIDES[slide].src)}
+                  />
+                  {SLIDES[slide].fit === 'cover' && (
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+                  )}
+                </motion.div>
+              </AnimatePresence>
 
-          <button
-            type="button"
-            onClick={prev}
-            className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-2 text-gold backdrop-blur-sm transition hover:bg-black/70"
-            aria-label="Previous image"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-2 text-gold backdrop-blur-sm transition hover:bg-black/70"
-            aria-label="Next image"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-
-          <div className="absolute bottom-14 left-0 right-0 flex justify-center gap-2">
-            {SLIDES.map((_, i) => (
               <button
-                key={i}
                 type="button"
-                onClick={() => setSlide(i)}
-                className={clsx(
-                  'h-2 rounded-full transition-all',
-                  i === slide ? 'w-8 bg-gold' : 'w-2 bg-cream/40 hover:bg-cream/70'
-                )}
-                aria-label={`Show image ${i + 1}`}
-                aria-current={i === slide ? 'true' : undefined}
-              />
-            ))}
+                onClick={prev}
+                className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/60 p-2 text-gold backdrop-blur-sm transition hover:bg-black/80"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/60 p-2 text-gold backdrop-blur-sm transition hover:bg-black/80"
+                aria-label="Next image"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
+
+            <div className="border-t border-gold/15 bg-black/95 px-4 py-3">
+              <p className="text-center text-sm font-medium text-gold md:text-base">
+                {SLIDES[slide].caption}
+              </p>
+              <div className="mt-3 flex justify-center gap-2">
+                {SLIDES.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setSlide(i)}
+                    className={clsx(
+                      'h-2 rounded-full transition-all',
+                      i === slide ? 'w-8 bg-gold' : 'w-2 bg-cream/40 hover:bg-cream/70'
+                    )}
+                    aria-label={`Show image ${i + 1}`}
+                    aria-current={i === slide ? 'true' : undefined}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

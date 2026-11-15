@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ChefHat, UtensilsCrossed } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { ABOUT_STORY, OPENING, SITE } from '@/lib/constants';
+import { ABOUT_STORY, SITE } from '@/lib/constants';
 import { IMAGES } from '@/lib/images';
 
 export function About() {
@@ -11,16 +11,16 @@ export function About() {
         <SectionHeading
           eyebrow="About Us"
           title="Two Friends, One Kitchen"
-          subtitle={`Opening ${OPENING.date} in ${SITE.locality} — a joint dream by a foodie and a cook.`}
+          subtitle={`${SITE.locality}, ${SITE.district} — a joint dream by a foodie and a cook.`}
         />
 
         <div className="grid items-center gap-8 md:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal">
             <Image
               src={IMAGES.about}
               alt="Food at Hungryana"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

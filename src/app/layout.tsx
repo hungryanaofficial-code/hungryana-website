@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     template: '%s | Hungryana',
   },
   description:
-    'Hungryana — Sharodiya Shubhechha! Multi-cuisine restaurant in Kirnahar, Birbhum. Visit us this Durga Puja for biryani, momos, tandoor & more.',
+    'Hungryana — Eat Hearty, Stay Hungry. Multi-cuisine restaurant in Kirnahar, Birbhum. Biryani, Pizza, Indian, Chinese, Pasta & more.',
   keywords: [
     'Hungryana',
     'Kirnahar restaurant',

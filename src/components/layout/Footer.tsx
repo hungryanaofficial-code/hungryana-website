@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { NAV_LINKS, OPENING, PHONE_TEL, SITE } from '@/lib/constants';
+import { NAV_LINKS, PHONE_TEL, SITE } from '@/lib/constants';
 import { LogoImage } from '@/components/ui/LogoImage';
 
 export function Footer() {
@@ -18,7 +18,7 @@ export function Footer() {
               {SITE.nameBengali}
             </p>
             <p className="mt-1 text-xs text-cream/50">
-              Opening {OPENING.date} · {OPENING.location}
+              {SITE.locality}, {SITE.district}
             </p>
           </div>
 

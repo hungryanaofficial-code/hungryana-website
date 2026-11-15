@@ -354,6 +354,15 @@ body {
   padding: 4rem 1.25rem;
 }
 
+/* Consistent photo / poster frames */
+.media-frame {
+  background: linear-gradient(180deg, #120810 0%, #000 100%);
+}
+
+.media-frame img {
+  max-height: 100%;
+}
+
 @media (min-width: 768px) {
   .section-padding {
     padding: 5rem 2rem;

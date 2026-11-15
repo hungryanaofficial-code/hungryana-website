@@ -14,6 +14,8 @@ dist/
 # Environment & secrets
 .env
 .env.local
+docs/website-handoff/MASTER_MAINTENANCE_VAULT_FILLED.md
+docs/website-handoff/*_PRIVATE.md
 .env.development.local
 .env.test.local
 .env.production.local

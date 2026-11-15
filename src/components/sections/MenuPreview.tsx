@@ -34,12 +34,18 @@ export function MenuPreview() {
           {picks.map((item) => (
             <div
               key={item.title}
-              className="flex gap-3 overflow-hidden rounded-xl border border-gold/10 bg-black/40"
+              className="flex min-h-[7.5rem] overflow-hidden rounded-xl border border-gold/10 bg-black/40"
             >
-              <div className="relative h-24 w-24 shrink-0 sm:h-auto sm:w-28">
-                <Image src={item.image} alt={item.title} fill className="object-cover" sizes="112px" />
+              <div className="relative aspect-square w-28 shrink-0 sm:w-32">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover object-center"
+                  sizes="128px"
+                />
               </div>
-              <div className="flex flex-col justify-center py-3 pr-3">
+              <div className="flex flex-1 flex-col justify-center px-3 py-3 sm:px-4">
                 <p className="font-medium text-warm-white">{item.title}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-cream/55">{item.description}</p>
               </div>

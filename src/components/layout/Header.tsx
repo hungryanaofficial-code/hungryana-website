@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, Phone, X } from 'lucide-react';
-import { NAV_LINKS, OPENING, PHONE_TEL, SITE } from '@/lib/constants';
+import { NAV_LINKS, PHONE_TEL, SITE } from '@/lib/constants';
 import { OrderNowButton } from '@/components/ui/OrderNowButton';
 import { LogoImage } from '@/components/ui/LogoImage';
 import clsx from 'clsx';
@@ -92,7 +92,7 @@ export function Header() {
               </Link>
             ))}
             <p className="px-4 py-2 text-xs text-cream/50">
-              Opening {OPENING.date} · {OPENING.location}
+              {SITE.locality}, {SITE.district}
             </p>
             <a
               href={PHONE_TEL}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ChefHat, UtensilsCrossed } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ABOUT_STORY, SITE } from '@/lib/constants';
-import { IMAGES } from '@/lib/images';
+import { AMBIENCE, IMAGES } from '@/lib/images';
 
 export function About() {
   return (
@@ -18,7 +18,7 @@ export function About() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal">
             <Image
               src={IMAGES.about}
-              alt="Food at Hungryana"
+              alt="Hungryana restaurant storefront in Kirnahar at night"
               fill
               className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -47,6 +47,28 @@ export function About() {
             </div>
 
             <p className="text-cream/70">{ABOUT_STORY.closing}</p>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="mb-4 text-center font-display text-2xl text-gold md:text-3xl">
+            Inside Hungryana
+          </h3>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {AMBIENCE.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

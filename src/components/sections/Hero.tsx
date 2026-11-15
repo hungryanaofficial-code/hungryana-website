@@ -14,17 +14,12 @@ export function Hero() {
       className="relative flex min-h-[88vh] flex-col justify-end overflow-hidden bg-black pb-10 pt-24 md:min-h-[92vh] md:pb-14"
       aria-label="Hungryana — home"
     >
-      {/* Background — pizza & kebabs, no rice */}
-      <div className="absolute inset-0 flex" aria-hidden="true">
-        <div
-          className="h-full w-1/2 bg-cover bg-center bg-no-repeat md:w-[55%]"
-          style={{ backgroundImage: `url(${IMAGES.heroPizza})` }}
-        />
-        <div
-          className="h-full w-1/2 bg-cover bg-center bg-no-repeat md:w-[45%]"
-          style={{ backgroundImage: `url(${IMAGES.heroKebab})` }}
-        />
-      </div>
+      {/* Background — real Hungryana dining room */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGES.heroInterior})` }}
+        aria-hidden="true"
+      />
       <div className="hero-overlay absolute inset-0" aria-hidden="true" />
       <div className="spicy-glow absolute inset-0" aria-hidden="true" />
 

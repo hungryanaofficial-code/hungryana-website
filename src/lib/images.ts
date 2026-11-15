@@ -10,9 +10,12 @@ export const IMAGES = {
   durgaLights: u('photo-1533174072545-7a4b6d5c4af9', 1600),
   durgaDhaki: u('photo-1578662996442-48f60103fc96', 1600),
 
-  // Hero
-  heroPizza: u('photo-1513104890138-7c749659a591', 1920),
-  heroKebab: u('photo-1742808838159-1848c1a36209', 1920),
+  // Real Hungryana restaurant photos (public/restaurant)
+  heroInterior: '/restaurant/interior-dining-wide.jpg',
+  storefront: '/restaurant/storefront-sign.jpg',
+  ambienceMirrorWall: '/restaurant/interior-mirror-wall.jpg',
+  ambienceTealWall: '/restaurant/interior-teal-wall.jpg',
+  ambienceCeiling: '/restaurant/interior-ceiling.jpg',
 
   // By dish
   sizzler: u('photo-1763219802762-1d34ee0907c5'), // grilled chicken + vegetables
@@ -27,8 +30,8 @@ export const IMAGES = {
   momo: u('photo-1496116218417-3981a247bcd4'), // dumplings
   mocktail: u('photo-1544145945-f90425340c7e'),
   dessert: u('photo-1551024506-0bccd828d307'), // ice cream dessert
-  about: u('photo-1414235077428-338989a2e8c0', 1200),
-  interior: u('photo-1517248135467-4c7edcad34c4'),
+  about: '/restaurant/storefront-sign.jpg',
+  interior: '/restaurant/interior-dining-wide.jpg',
 
   // Legacy aliases (keep categories working)
   pizza: u('photo-1772494047822-d0375853f7fd'),
@@ -37,6 +40,12 @@ export const IMAGES = {
   chinese: u('photo-1772729219168-af0f0e57bb9c'),
   chowmein: u('photo-1512058564366-18510be2db19'),
 } as const;
+
+export const AMBIENCE = [
+  { src: IMAGES.ambienceMirrorWall, alt: 'Backlit mirror and greenery wall beside colourful shutters' },
+  { src: IMAGES.ambienceTealWall, alt: 'Teal feature wall with gold deer artwork and yellow seating' },
+  { src: IMAGES.ambienceCeiling, alt: 'Hanging greenery and festive lanterns on the ceiling' },
+] as const;
 
 export const SPECIALITIES = [
   {

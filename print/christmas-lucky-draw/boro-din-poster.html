@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<title>Shubho Boro Din Poster</title>
+<!-- 25 December greeting post, 1080 x 1350 (4:5). Rendered to PNG with headless Chrome. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Galada&family=Hind+Siliguri:wght@500;700&family=Great+Vibes&family=Poppins:wght@600;700;800&family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root { --night: #071a2e; --night-2: #0d2d4a; --gold: #ffcf4a; --gold-2: #ffe8a3; --red: #d4141c; --green: #0f7a3e; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; background: var(--night); }
+  body { font-family: "Poppins", Arial, sans-serif; color: #fff; }
+
+  .poster {
+    position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 62%, rgba(255,207,74,.22), transparent 70%),
+      radial-gradient(ellipse at 50% 0%, #17466f 0%, var(--night-2) 40%, var(--night) 100%);
+  }
+  .snow { position: absolute; inset: 0; pointer-events: none; }
+  .snow i { position: absolute; border-radius: 50%; background: #fff; }
+
+  /* gold frame */
+  .frame { position: absolute; inset: 26px; border: 3px solid rgba(255,207,74,.75); border-radius: 30px; }
+  .frame::after { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(255,207,74,.4); border-radius: 22px; }
+
+  .logo-wrap {
+    position: absolute; top: 62px; left: 50%; transform: translateX(-50%);
+    width: 330px; height: 236px; display: grid; place-items: center;
+  }
+  .logo-wrap::before {   /* soft glow so the red logo pops on navy */
+    content: ""; position: absolute; inset: 10px 0; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,255,255,.22), transparent);
+  }
+  .logo { position: relative; width: 310px; filter: drop-shadow(0 8px 16px rgba(0,0,0,.5)); }
+
+  .date {
+    position: absolute; top: 312px; width: 100%; text-align: center;
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    font-family: "Anton", sans-serif; font-size: 40px; letter-spacing: 6px; color: var(--gold);
+  }
+  .date::before, .date::after { content: ""; width: 110px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold)); }
+  .date::after { transform: scaleX(-1); }
+
+  .bn-title {
+    position: absolute; top: 392px; width: 100%; text-align: center;
+    font-family: "Galada", "Hind Siliguri", cursive; font-size: 190px; line-height: 1.25;
+    background: linear-gradient(180deg, #fff7d1 0%, var(--gold) 50%, #e8920c 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 6px 0 rgba(0,0,0,.35));
+  }
+  .merry {
+    position: absolute; top: 640px; width: 100%; text-align: center;
+    font-family: "Great Vibes", cursive; font-size: 76px; color: #fff;
+    text-shadow: 0 3px 10px rgba(0,0,0,.4);
+  }
+
+  .tree { position: absolute; top: 745px; left: 50%; transform: translateX(-50%); width: 320px; }
+  .gift { position: absolute; }
+
+  .wish {
+    position: absolute; top: 1100px; left: 90px; right: 90px; text-align: center;
+    font-family: "Hind Siliguri", sans-serif; font-weight: 700; font-size: 38px; line-height: 1.35; color: #fff;
+  }
+  .wish span { color: var(--gold); }
+
+  .footer {
+    position: absolute; bottom: 52px; left: 0; right: 0; text-align: center;
+    font-size: 21px; font-weight: 600; color: var(--gold-2); letter-spacing: .3px;
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="snow" id="snow"></div>
+  <div class="frame"></div>
+
+  <div class="logo-wrap"><img class="logo" src="logo-watermark.png" alt="Hungryana"></div>
+
+  <div class="date">25 DECEMBER</div>
+  <div class="bn-title">শুভ বড়দিন</div>
+  <div class="merry">Merry Christmas</div>
+
+  <!-- Christmas tree -->
+  <svg class="tree" viewBox="0 0 360 380" aria-hidden="true">
+    <defs>
+      <linearGradient id="leaf" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1fa356"/><stop offset="1" stop-color="#0b5c2e"/>
+      </linearGradient>
+      <radialGradient id="starglow"><stop offset="0" stop-color="#fff3b0" stop-opacity=".9"/><stop offset="1" stop-color="#ffcf4a" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle cx="180" cy="34" r="46" fill="url(#starglow)"/>
+    <rect x="160" y="320" width="40" height="40" rx="4" fill="#6b3a17"/>
+    <path d="M180 60 L262 160 L222 160 L292 245 L246 245 L326 330 L34 330 L114 245 L68 245 L138 160 L98 160 Z" fill="url(#leaf)"/>
+    <!-- garland -->
+    <path d="M128 150 Q180 182 236 146" fill="none" stroke="#ffcf4a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M96 236 Q180 280 268 230" fill="none" stroke="#ffcf4a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M66 318 Q180 360 296 314" fill="none" stroke="#ffcf4a" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+    <!-- ornaments -->
+    <g>
+      <circle cx="160" cy="125" r="10" fill="#d4141c"/><circle cx="205" cy="200" r="11" fill="#4db8ff"/>
+      <circle cx="140" cy="210" r="10" fill="#ffcf4a"/><circle cx="240" cy="275" r="12" fill="#d4141c"/>
+      <circle cx="120" cy="290" r="11" fill="#ffffff"/><circle cx="185" cy="300" r="10" fill="#ff8a1f"/>
+      <circle cx="230" cy="180" r="8" fill="#ffffff"/><circle cx="175" cy="245" r="9" fill="#d4141c"/>
+      <circle cx="280" cy="315" r="9" fill="#ffcf4a"/><circle cx="85" cy="318" r="9" fill="#4db8ff"/>
+    </g>
+    <!-- star -->
+    <path d="M180 8 L190 32 L216 33 L196 49 L203 74 L180 60 L157 74 L164 49 L144 33 L170 32 Z" fill="#ffcf4a" stroke="#fff3b0" stroke-width="2"/>
+    <!-- gifts -->
+    <g transform="translate(18 318)">
+      <rect width="62" height="50" rx="4" fill="#d4141c"/><rect x="26" width="10" height="50" fill="#ffcf4a"/>
+      <rect y="18" width="62" height="10" fill="#ffcf4a"/>
+      <path d="M31 0 C18 -18 6 -6 31 0 C56 -6 44 -18 31 0" fill="none" stroke="#ffcf4a" stroke-width="5"/>
+    </g>
+    <g transform="translate(282 326)">
+      <rect width="56" height="42" rx="4" fill="#ffffff"/><rect x="23" width="10" height="42" fill="#d4141c"/>
+      <rect y="15" width="56" height="10" fill="#d4141c"/>
+      <path d="M28 0 C16 -16 4 -5 28 0 C52 -5 40 -16 28 0" fill="none" stroke="#d4141c" stroke-width="5"/>
+    </g>
+  </svg>
+
+  <div class="wish">
+    <span>Hungryana</span> পরিবারের পক্ষ থেকে<br>
+    সবাইকে বড়দিনের আন্তরিক শুভেচ্ছা ও ভালোবাসা
+  </div>
+
+  <div class="footer">Kirnahar, Birbhum &nbsp;·&nbsp; +91 83898 77242 &nbsp;·&nbsp; hungryana.com</div>
+</div>
+
+<script>
+  let s = 11; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const snow = document.getElementById("snow");
+  for (let i = 0; i < 90; i++) {
+    const d = 2 + rnd() * 8, el = document.createElement("i");
+    el.style.cssText = `left:${rnd()*1080}px;top:${rnd()*1350}px;width:${d}px;height:${d}px;opacity:${.2+rnd()*.6}`;
+    snow.appendChild(el);
+  }
+</script>
+</body>
+</html>

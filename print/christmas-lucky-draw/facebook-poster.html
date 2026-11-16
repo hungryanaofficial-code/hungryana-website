@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Christmas Lucky Draw Poster</title>
+<!-- Facebook feed poster, 1080 x 1350 (4:5). Rendered to PNG with headless Chrome. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@500;600;700;800&family=Pacifico&family=Hind+Siliguri:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #b3121a; --red-deep: #6e0a0f; --gold: #ffcc33; --gold-2: #ffe28a;
+    --cream: #fff6e3; --green: #0f6b3a; --ink: #1b0a05;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; background: var(--red-deep); }
+  body { font-family: "Poppins", Arial, sans-serif; color: #fff; }
+
+  .poster {
+    position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 70% 45% at 50% 46%, rgba(255,190,80,.35), transparent 70%),
+      radial-gradient(ellipse at 50% 0%, #d81e27 0%, var(--red) 40%, var(--red-deep) 100%);
+  }
+  /* snow */
+  .snow { position: absolute; inset: 0; pointer-events: none; }
+  .snow i { position: absolute; border-radius: 50%; background: #fff; opacity: .55; }
+
+  /* string lights across the top */
+  .lights { position: absolute; top: 0; left: 0; width: 100%; height: 90px; }
+
+  .logo { position: absolute; top: 58px; left: 50%; transform: translateX(-50%); width: 300px;
+          filter: drop-shadow(0 6px 14px rgba(0,0,0,.45)); }
+
+  .kicker {
+    position: absolute; top: 262px; width: 100%; text-align: center;
+    font-family: "Pacifico", cursive; font-size: 52px; color: var(--gold-2);
+    text-shadow: 0 3px 0 rgba(0,0,0,.25);
+  }
+  .headline {
+    position: absolute; top: 352px; width: 100%; text-align: center;
+    font-family: "Anton", Impact, sans-serif; text-transform: uppercase; line-height: .95;
+  }
+  .headline .l1 { font-size: 56px; color: #fff; letter-spacing: 1px; }
+  .headline .l2 {
+    display: block; font-size: 160px; margin-top: 14px; letter-spacing: 2px;
+    background: linear-gradient(180deg, #fff3b0 0%, var(--gold) 55%, #f29a0c 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 6px 0 var(--red-deep));
+  }
+  .headline .l3 { font-size: 60px; color: #fff; letter-spacing: 1px; }
+  .bn {
+    position: absolute; top: 625px; width: 100%; text-align: center;
+    font-family: "Hind Siliguri", sans-serif; font-size: 40px; color: var(--gold-2);
+  }
+
+  .cake { position: absolute; top: 700px; left: 50%; transform: translateX(-50%); width: 430px; }
+  .badge {
+    position: absolute; top: 720px; right: 92px; width: 190px; height: 190px; border-radius: 50%;
+    background: var(--gold); color: var(--red-deep); transform: rotate(12deg);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.35); border: 6px dashed var(--red);
+    text-align: center; line-height: 1;
+  }
+  .badge b { font-family: "Anton", sans-serif; font-size: 58px; }
+  .badge span { font-weight: 800; font-size: 22px; text-transform: uppercase; margin-top: 4px; }
+  .badge2 {
+    position: absolute; top: 760px; left: 84px; width: 200px; transform: rotate(-9deg);
+    background: #fff; color: var(--red); border-radius: 18px; padding: 16px 12px; text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.35); line-height: 1.05;
+  }
+  .badge2 small { display: block; font-weight: 700; font-size: 20px; color: #333; }
+  .badge2 b { display: block; font-family: "Anton", sans-serif; font-size: 58px; line-height: 1.15; margin: 4px 0; }
+  .badge2 em { display: block; font-style: normal; font-weight: 700; font-size: 18px; color: #333; }
+
+  /* how it works */
+  .steps {
+    position: absolute; top: 972px; left: 60px; right: 60px;
+    background: var(--cream); color: var(--ink); border-radius: 26px;
+    padding: 22px 26px 18px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  .steps h3 { text-align: center; font-size: 26px; font-weight: 800; color: var(--red); letter-spacing: 3px; text-transform: uppercase; }
+  .row { display: flex; gap: 14px; margin-top: 12px; }
+  .step { flex: 1; display: flex; gap: 10px; align-items: flex-start; }
+  .num { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--red); color: #fff;
+         font-family: "Anton", sans-serif; font-size: 26px; display: grid; place-items: center; }
+  .step p { font-size: 18px; line-height: 1.22; font-weight: 600; }
+  .step p strong { color: var(--red); font-weight: 800; }
+  .tiers {
+    margin-top: 14px; padding-top: 12px; border-top: 2px dashed #e2c9a0;
+    display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 18px; font-weight: 700;
+  }
+  .tier { background: var(--green); color: #fff; padding: 5px 13px; border-radius: 999px; white-space: nowrap; }
+  .tiers .more { color: var(--green); font-weight: 800; }
+
+  .footer {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 96px;
+    background: rgba(20,4,4,.82); display: flex; flex-direction: column; justify-content: center; align-items: center;
+    border-top: 3px solid var(--gold);
+  }
+  .footer .dates { font-size: 23px; font-weight: 800; color: var(--gold); letter-spacing: .5px; }
+  .footer .contact { font-size: 20px; font-weight: 600; margin-top: 2px; }
+  .tnc { position: absolute; bottom: 8px; right: 30px; font-size: 13px; opacity: .7; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="snow" id="snow"></div>
+
+  <svg class="lights" viewBox="0 0 1080 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 18 Q135 70 270 22 T540 22 T810 22 T1080 18" fill="none" stroke="#2a1a10" stroke-width="3"/>
+    <g id="bulbs"></g>
+  </svg>
+
+  <img class="logo" src="logo-watermark.png" alt="Hungryana">
+
+  <div class="kicker">Christmas Lucky Draw</div>
+  <div class="headline">
+    <div class="l1">This Christmas, Hungryana gives you a</div>
+    <span class="l2">FREE FRUIT CAKE!</span>
+  </div>
+  <div class="bn">বড়দিনে খাওয়া জমুক, কেক জিতুন ফ্রিতে!</div>
+
+  <!-- fruit cake illustration -->
+  <svg class="cake" viewBox="0 0 430 270" aria-hidden="true">
+    <defs>
+      <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#9c5a24"/><stop offset="1" stop-color="#5e300f"/>
+      </linearGradient>
+      <linearGradient id="crumb" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#c98a45"/><stop offset="1" stop-color="#9a5e26"/>
+      </linearGradient>
+      <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9d2c8"/>
+      </linearGradient>
+    </defs>
+    <ellipse cx="215" cy="238" rx="205" ry="26" fill="url(#plate)"/>
+    <ellipse cx="215" cy="232" rx="180" ry="17" fill="#efe9df"/>
+    <!-- loaf body -->
+    <path d="M60 110 Q62 92 82 90 L300 90 Q318 92 320 110 L322 225 L58 225 Z" fill="url(#crust)"/>
+    <!-- domed top -->
+    <path d="M58 112 Q70 58 190 60 Q310 58 322 112 Z" fill="#7a3f15"/>
+    <path d="M70 104 Q90 70 190 70 Q290 70 310 104" fill="none" stroke="#b06b2c" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <!-- cut face slice -->
+    <path d="M300 92 L380 112 L382 226 L322 225 Z" fill="url(#crumb)"/>
+    <path d="M300 92 L380 112" stroke="#6e3a12" stroke-width="6"/>
+    <g>
+      <circle cx="330" cy="140" r="7" fill="#d4141c"/><circle cx="355" cy="160" r="6" fill="#1f9a4a"/>
+      <circle cx="338" cy="185" r="6" fill="#ffb21a"/><circle cx="362" cy="205" r="7" fill="#d4141c"/>
+      <circle cx="334" cy="214" r="5" fill="#1f9a4a"/><circle cx="366" cy="132" r="5" fill="#ffb21a"/>
+      <circle cx="348" cy="122" r="4" fill="#5a1f0a"/><circle cx="326" cy="166" r="4" fill="#5a1f0a"/>
+      <circle cx="370" cy="182" r="4" fill="#5a1f0a"/>
+    </g>
+    <!-- fruit bits peeking on the side -->
+    <g opacity=".9">
+      <circle cx="110" cy="150" r="6" fill="#d4141c"/><circle cx="160" cy="185" r="5" fill="#1f9a4a"/>
+      <circle cx="220" cy="140" r="6" fill="#ffb21a"/><circle cx="265" cy="190" r="6" fill="#d4141c"/>
+      <circle cx="95" cy="200" r="5" fill="#ffb21a"/><circle cx="200" cy="205" r="5" fill="#d4141c"/>
+    </g>
+    <!-- icing drizzle -->
+    <path d="M78 92 Q100 108 118 92 Q140 112 162 92 Q186 110 208 92 Q232 112 254 92 Q276 108 300 92"
+          fill="none" stroke="#fff6e3" stroke-width="9" stroke-linecap="round"/>
+    <!-- holly -->
+    <g transform="translate(190 52)">
+      <path d="M0 0 C-22 -6 -40 -2 -52 10 C-40 12 -34 18 -36 28 C-22 20 -10 18 0 0Z" fill="#127a3c"/>
+      <path d="M0 0 C22 -6 40 -2 52 10 C40 12 34 18 36 28 C22 20 10 18 0 0Z" fill="#0f6b3a"/>
+      <circle cx="-6" cy="-4" r="9" fill="#e0141e"/><circle cx="8" cy="-6" r="9" fill="#c80f18"/>
+      <circle cx="1" cy="-16" r="9" fill="#f0222c"/>
+      <circle cx="-2" cy="-19" r="3" fill="#fff" opacity=".6"/>
+    </g>
+  </svg>
+
+  <div class="badge"><b>FREE</b><span>on 25 Dec</span></div>
+  <div class="badge2"><small>Lucky</small><b>5</b><em>Winners!</em></div>
+
+  <div class="steps">
+    <h3>How to win</h3>
+    <div class="row">
+      <div class="step"><div class="num">1</div><p>Eat at Hungryana with a bill of <strong>₹500 or more</strong></p></div>
+      <div class="step"><div class="num">2</div><p>Get a coupon, write your <strong>name &amp; phone</strong></p></div>
+      <div class="step"><div class="num">3</div><p>Drop it in the box. <strong>5 lucky winners</strong> get a FREE cake on <strong>Christmas!</strong></p></div>
+    </div>
+    <div class="tiers">
+      <span class="tier">₹500–999 = 1 coupon</span>
+      <span class="tier">₹1000–1499 = 2</span>
+      <span class="tier">₹1500–1999 = 3</span>
+      <span class="more">Bigger bill, more chances!</span>
+    </div>
+  </div>
+
+  <div class="tnc">*T&amp;C apply</div>
+  <div class="footer">
+    <div class="dates">Contest 20 Nov – 20 Dec &nbsp;·&nbsp; Winners 22 Dec &nbsp;·&nbsp; Cake on Christmas, 25 Dec</div>
+    <div class="contact">Kirnahar, Birbhum &nbsp;·&nbsp; +91 83898 77242 &nbsp;·&nbsp; hungryana.com</div>
+  </div>
+</div>
+
+<script>
+  // deterministic snow so every render looks the same
+  let s = 7; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const snow = document.getElementById("snow");
+  for (let i = 0; i < 70; i++) {
+    const d = 3 + rnd() * 9, el = document.createElement("i");
+    el.style.cssText = `left:${rnd()*1080}px;top:${rnd()*980}px;width:${d}px;height:${d}px;opacity:${.25+rnd()*.5}`;
+    snow.appendChild(el);
+  }
+  // bulbs along the light string
+  const colors = ["#ffcc33", "#2ecc71", "#ff4d4d", "#4db8ff", "#ffffff"];
+  const path = document.querySelector(".lights path"), len = path.getTotalLength();
+  const g = document.getElementById("bulbs");
+  for (let i = 1; i < 22; i++) {
+    const p = path.getPointAtLength(len * i / 22), c = colors[i % colors.length];
+    g.insertAdjacentHTML("beforeend",
+      `<circle cx="${p.x}" cy="${p.y + 12}" r="9" fill="${c}"/><circle cx="${p.x}" cy="${p.y + 12}" r="18" fill="${c}" opacity=".25"/>`);
+  }
+</script>
+</body>
+</html>
